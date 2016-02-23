@@ -1,7 +1,31 @@
+<?php
+/* Smarty version 3.1.29, created on 2016-02-23 11:13:21
+  from "/var/www/html/ControleDeGastosMaterialDesign/view/despesas/index.tpl" */
+
+if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
+  'has_nocache_code' => false,
+  'version' => '3.1.29',
+  'unifunc' => 'content_56cc69014a7898_50890706',
+  'file_dependency' => 
+  array (
+    '8e7dbcb01a1dc4fa4e08dcf0cf6c30900b24a2ee' => 
+    array (
+      0 => '/var/www/html/ControleDeGastosMaterialDesign/view/despesas/index.tpl',
+      1 => 1456236799,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_56cc69014a7898_50890706 ($_smarty_tpl) {
+?>
 <main class="mdl-layout__content mdl-color--grey-100">
     <div class="mdl-grid demo-content">
         <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
-            <h1>{$titulo}</h1>
+            <h1><?php echo $_smarty_tpl->tpl_vars['titulo']->value;?>
+</h1>
         </div>
         <div class="demo-graphs mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--8-col">
 
@@ -9,7 +33,7 @@
                 <fieldset>
 
 
-                    <legend>Lançar Receita</legend>
+                    <legend>Lançar Despesa</legend>
                     <div class="form-group">
                         <label for="inputEmail" class="col-md-2 control-label">Nova: </label>
 
@@ -19,7 +43,7 @@
                     </div>
 
                     <label for="chkbox2" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                        Receita Existente
+                        Despesa Existente
                         <input type="checkbox" id="chkbox2" class="mdl-checkbox__input form-control">
                     </label>
 
@@ -86,4 +110,5 @@
 
         </div>
     </div>
-</main>
+</main><?php }
+}

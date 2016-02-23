@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-02-22 14:55:24
+/* Smarty version 3.1.29, created on 2016-02-23 11:30:48
   from "/var/www/html/ControleDeGastosMaterialDesign/view/receitas/index.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_56cb4b8c661fd8_73322776',
+  'unifunc' => 'content_56cc6d182f9552_31097976',
   'file_dependency' => 
   array (
     'cf7304973c6faa3c13e5ddafce01cdcb5c3e03ee' => 
     array (
       0 => '/var/www/html/ControleDeGastosMaterialDesign/view/receitas/index.tpl',
-      1 => 1456163721,
+      1 => 1456236817,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_56cb4b8c661fd8_73322776 ($_smarty_tpl) {
+function content_56cc6d182f9552_31097976 ($_smarty_tpl) {
 ?>
 <main class="mdl-layout__content mdl-color--grey-100">
     <div class="mdl-grid demo-content">
@@ -31,59 +31,64 @@ function content_56cb4b8c661fd8_73322776 ($_smarty_tpl) {
 
             <form class="form-horizontal">
                 <fieldset>
+
+
                     <legend>Lançar Receita</legend>
                     <div class="form-group">
                         <label for="inputEmail" class="col-md-2 control-label">Nova: </label>
 
                         <div class="col-md-10">
-                            <input type="email" class="form-control" id="inputEmail" placeholder="Nova ">
+                            <input type="email" class="form-control" id="inputEmail" placeholder="Nova Despesa">
                         </div>
                     </div>
+
+                    <label for="chkbox2" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                        Receita Existente
+                        <input type="checkbox" id="chkbox2" class="mdl-checkbox__input form-control">
+                    </label>
+
                     <div class="form-group">
                         <label for="conta" class="col-md-2 control-label">Existente</label>
                     </div>
                     <div class="col-md-10">
                         <select name="conta" class="form-control">
+                            <option value="null">Despesas</option>
                             <option value="1">Teste</option>
                             <option value="2">Mimimi</option>
                         </select>
-
                     </div>
-
-                    <div class="col-md-10">
-                        <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-                    </div>
-
-                    <div class="col-md-10">
-
-                        <label for="chkbox1" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                            <input type="checkbox" id="chkbox1" class="mdl-checkbox__input form-control">
-                            <span class="mdl-checkbox__label">Click per object</span>
-                        </label>
-
-
-                        <label for="chkbox2" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                            <input type="checkbox" id="chkbox2" class="mdl-checkbox__input form-control">
-                            <span class="mdl-checkbox__label">Views per object</span>
-                        </label>
-
-                        <label for="chkbox3" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                            <input type="checkbox" id="chkbox3" class="mdl-checkbox__input form-control">
-                            <span class="mdl-checkbox__label">Objects selected</span>
-                        </label>
-
-                        <label for="chkbox4" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                            <input type="checkbox" id="chkbox4" class="mdl-checkbox__input form-control">
-                            <span class="mdl-checkbox__label">Objects viewed</span>
-                        </label>
-
-
-
 
                     <div class="form-group">
-                        <div class="col-md-10 col-md-offset-2">
-                            <button type="button" class="btn btn-default">Cancel</button>
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                        <label for="mes" class="col-md-2 control-label">Mês</label>
+                    </div>
+                    <div class="col-md-10">
+                        <select name="mes" class="form-control">
+                            <option value="">Mês</option>
+                            <option value="JAN">Janeiro</option>
+                            <option value="FEV">Feveriro</option>
+                            <option value="MAR">Março</option>
+                            <option value="ABR">Abril</option>
+                            <option value="MAI">Maio</option>
+                            <option value="JUN">Junho</option>
+                            <option value="JUL">Julho</option>
+                            <option value="AGO">Agosto</option>
+                            <option value="SET">Setembro</option>
+                            <option value="OUT">Outubro</option>
+                            <option value="NOV">Novembro</option>
+                            <option value="DEZ">Dezembro</option>
+                        </select>
+                    </div>
+
+
+
+                    <div class="col-md-10">
+                        <input type="text" class="form-control" id="inputPassword" placeholder="Valor R$,00, 00">
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-10 col-md-offset-2">                    
+                            <button type="submit" class="btn btn-primary">Gravar</button>
+                            <button type="reset" class="btn btn-default">Cancel</button>
                         </div>
                     </div>
                 </fieldset>

@@ -40,8 +40,8 @@ class receitas extends controller {
     public function receitaVariavel() {
         $titulo = 'Lançar Receita Varivável';
         $this->smarty->assign('titulo', $titulo);
-        $this->smarty->display('receitas/index.tpl');
         $header = $this->smarty->fetch('comum/head.tpl');
+        $content = $this->smarty->fetch('receitas/index.tpl');
 
         $this->smarty->assign('content', $content);
         $this->smarty->assign('header', $header);

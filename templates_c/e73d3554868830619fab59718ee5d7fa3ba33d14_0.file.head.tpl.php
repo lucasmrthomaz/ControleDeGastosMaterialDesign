@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-02-22 11:25:59
+/* Smarty version 3.1.29, created on 2016-02-23 10:05:48
   from "/var/www/html/ControleDeGastosMaterialDesign/view/comum/head.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_56caf047503560_96423424',
+  'unifunc' => 'content_56cc592c953d32_94474976',
   'file_dependency' => 
   array (
     'e73d3554868830619fab59718ee5d7fa3ba33d14' => 
     array (
       0 => '/var/www/html/ControleDeGastosMaterialDesign/view/comum/head.tpl',
-      1 => 1456140357,
+      1 => 1456232635,
       2 => 'file',
     ),
   ),
@@ -19,10 +19,10 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_56caf047503560_96423424 ($_smarty_tpl) {
+function content_56cc592c953d32_94474976 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
     <head>
 
         <!-- Add to homescreen for Chrome on Android -->

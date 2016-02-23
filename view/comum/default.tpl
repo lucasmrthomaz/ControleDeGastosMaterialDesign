@@ -51,8 +51,8 @@
                 <a class="mdl-navigation__link" href="relatorios.php"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">assessment</i>Relatório</a>
                 <a class="mdl-navigation__link" href="receitas.php?mod=RF"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">trending_up</i>Receitas Fixas</a>
                 <a class="mdl-navigation__link" href="receitas.php?mod=RV"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">trending_up</i>Receitas Variáveis</a>
-                <a class="mdl-navigation__link" href="despesas.php?mod=RF"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">trending_down</i>Despesas Fixas</a>
-                <a class="mdl-navigation__link" href="despesas.php?mod=RV"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">trending_down</i>Despesas Variáveis</a>
+                <a class="mdl-navigation__link" href="despesas.php?mod=DF"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">trending_down</i>Despesas Fixas</a>
+                <a class="mdl-navigation__link" href="despesas.php?mod=DV"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">trending_down</i>Despesas Variáveis</a>
                 <a class="mdl-navigation__link" href="excluir.php"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">delete_forever</i>Excluir Registros</a>
                 <div class="mdl-layout-spacer"></div>
                 <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">help_outline</i><span class="visuallyhidden">Help</span></a>

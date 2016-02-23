@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
     <head>
 
         <!-- Add to homescreen for Chrome on Android -->

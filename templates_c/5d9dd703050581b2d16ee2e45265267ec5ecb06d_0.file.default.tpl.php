@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-02-20 23:06:29
+/* Smarty version 3.1.29, created on 2016-02-23 11:05:48
   from "/var/www/html/ControleDeGastosMaterialDesign/view/comum/default.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_56c91ba586d256_88559221',
+  'unifunc' => 'content_56cc673c841e50_58012008',
   'file_dependency' => 
   array (
     '5d9dd703050581b2d16ee2e45265267ec5ecb06d' => 
     array (
       0 => '/var/www/html/ControleDeGastosMaterialDesign/view/comum/default.tpl',
-      1 => 1456020258,
+      1 => 1456236346,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_56c91ba586d256_88559221 ($_smarty_tpl) {
+function content_56cc673c841e50_58012008 ($_smarty_tpl) {
 ?>
 
 <?php echo $_smarty_tpl->tpl_vars['header']->value;?>
@@ -75,8 +75,8 @@ function content_56c91ba586d256_88559221 ($_smarty_tpl) {
                 <a class="mdl-navigation__link" href="relatorios.php"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">assessment</i>Relatório</a>
                 <a class="mdl-navigation__link" href="receitas.php?mod=RF"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">trending_up</i>Receitas Fixas</a>
                 <a class="mdl-navigation__link" href="receitas.php?mod=RV"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">trending_up</i>Receitas Variáveis</a>
-                <a class="mdl-navigation__link" href="despesas.php?mod=RF"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">trending_down</i>Despesas Fixas</a>
-                <a class="mdl-navigation__link" href="despesas.php?mod=RV"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">trending_down</i>Despesas Variáveis</a>
+                <a class="mdl-navigation__link" href="despesas.php?mod=DF"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">trending_down</i>Despesas Fixas</a>
+                <a class="mdl-navigation__link" href="despesas.php?mod=DV"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">trending_down</i>Despesas Variáveis</a>
                 <a class="mdl-navigation__link" href="excluir.php"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">delete_forever</i>Excluir Registros</a>
                 <div class="mdl-layout-spacer"></div>
                 <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">help_outline</i><span class="visuallyhidden">Help</span></a>

@@ -9,7 +9,7 @@
                 <fieldset>
 
 
-                    <legend>Lançar Receita</legend>
+                    <legend>Lançar Despesa</legend>
                     <div class="form-group">
                         <label for="inputEmail" class="col-md-2 control-label">Nova: </label>
 
@@ -19,7 +19,7 @@
                     </div>
 
                     <label for="chkbox2" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                        Receita Existente
+                        Despesa Existente
                         <input type="checkbox" id="chkbox2" class="mdl-checkbox__input form-control">
                     </label>
 
