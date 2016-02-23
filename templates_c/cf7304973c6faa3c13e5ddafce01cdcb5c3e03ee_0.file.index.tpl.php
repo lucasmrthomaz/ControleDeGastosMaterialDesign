@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-02-23 15:06:21
+/* Smarty version 3.1.29, created on 2016-02-23 17:29:31
   from "/var/www/html/ControleDeGastosMaterialDesign/view/receitas/index.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_56cc9f9d5fcdf1_71335348',
+  'unifunc' => 'content_56ccc12b1b2417_96007856',
   'file_dependency' => 
   array (
     'cf7304973c6faa3c13e5ddafce01cdcb5c3e03ee' => 
     array (
       0 => '/var/www/html/ControleDeGastosMaterialDesign/view/receitas/index.tpl',
-      1 => 1456250769,
+      1 => 1456259328,
       2 => 'file',
     ),
   ),
@@ -19,10 +19,13 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_56cc9f9d5fcdf1_71335348 ($_smarty_tpl) {
+function content_56ccc12b1b2417_96007856 ($_smarty_tpl) {
 ?>
 <main class="mdl-layout__content mdl-color--grey-100">
     <div class="mdl-grid demo-content">
+        <?php echo '<script'; ?>
+ src="/files/js/receitas/valmoeda.js" type="text/javascript"><?php echo '</script'; ?>
+>
         <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
             <h1><?php echo $_smarty_tpl->tpl_vars['titulo']->value;?>
 </h1>
@@ -55,9 +58,34 @@ function content_56cc9f9d5fcdf1_71335348 ($_smarty_tpl) {
                     </div>
                     <div class="col-md-10">
                         <select name="recexistente" class="form-control"  name="receitarec">
-                            <option value="">Despesas</option>
-                            <option value="Teste">Teste</option>
-                            <option value="Mimimi">Mimimi</option>
+                            <option value="">Receitas</option>
+                            <?php
+$_from = $_smarty_tpl->tpl_vars['receitas']->value;
+if (!is_array($_from) && !is_object($_from)) {
+settype($_from, 'array');
+}
+$__foreach_receita_0_saved_item = isset($_smarty_tpl->tpl_vars['receita']) ? $_smarty_tpl->tpl_vars['receita'] : false;
+$__foreach_receita_0_saved_key = isset($_smarty_tpl->tpl_vars['num']) ? $_smarty_tpl->tpl_vars['num'] : false;
+$_smarty_tpl->tpl_vars['receita'] = new Smarty_Variable();
+$_smarty_tpl->tpl_vars['num'] = new Smarty_Variable();
+$_smarty_tpl->tpl_vars['receita']->_loop = false;
+foreach ($_from as $_smarty_tpl->tpl_vars['num']->value => $_smarty_tpl->tpl_vars['receita']->value) {
+$_smarty_tpl->tpl_vars['receita']->_loop = true;
+$__foreach_receita_0_saved_local_item = $_smarty_tpl->tpl_vars['receita'];
+?>
+                                <option value="<?php echo $_smarty_tpl->tpl_vars['receita']->value['descricao'];?>
+"><?php echo $_smarty_tpl->tpl_vars['receita']->value['descricao'];?>
+</option>
+                            <?php
+$_smarty_tpl->tpl_vars['receita'] = $__foreach_receita_0_saved_local_item;
+}
+if ($__foreach_receita_0_saved_item) {
+$_smarty_tpl->tpl_vars['receita'] = $__foreach_receita_0_saved_item;
+}
+if ($__foreach_receita_0_saved_key) {
+$_smarty_tpl->tpl_vars['num'] = $__foreach_receita_0_saved_key;
+}
+?>
                         </select>
                     </div>
 
@@ -93,7 +121,7 @@ function content_56cc9f9d5fcdf1_71335348 ($_smarty_tpl) {
 
 
                     <div class="col-md-10">
-                        <input type="text" class="form-control" id="valor" name="valor" placeholder="Valor R$,00, 00">
+                        <input type="text" class="form-control" id="valor" name="valor" placeholder="Valor R$,00, 00"  onkeyup="moeda(this)">
                     </div>
 
                     <div class="form-group">

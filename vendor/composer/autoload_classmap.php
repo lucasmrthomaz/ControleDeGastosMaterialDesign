@@ -174,6 +174,7 @@ return array(
     'TP_yyToken' => $vendorDir . '/smarty/smarty/libs/sysplugins/smarty_internal_templateparser.php',
     'controller' => $baseDir . '/controller/controller.php',
     'dashboard' => $baseDir . '/controller/dashboardController.php',
+    'despesaModel' => $baseDir . '/model/despesaModel.php',
     'despesas' => $baseDir . '/controller/despesasController.php',
     'home' => $baseDir . '/controller/home.php',
     'login' => $baseDir . '/controller/loginController.php',

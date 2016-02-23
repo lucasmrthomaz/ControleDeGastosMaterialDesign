@@ -1,5 +1,6 @@
 <main class="mdl-layout__content mdl-color--grey-100">
     <div class="mdl-grid demo-content">
+        <script src="/files/js/receitas/valmoeda.js" type="text/javascript"></script>
         <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
             <h1>{$titulo}</h1>
         </div>
@@ -30,9 +31,10 @@
                     </div>
                     <div class="col-md-10">
                         <select name="recexistente" class="form-control"  name="receitarec">
-                            <option value="">Despesas</option>
-                            <option value="Teste">Teste</option>
-                            <option value="Mimimi">Mimimi</option>
+                            <option value="">Receitas</option>
+                            {foreach $receitas as $num => $receita}
+                                <option value="{$receita.descricao}">{$receita.descricao}</option>
+                            {/foreach}
                         </select>
                     </div>
 
@@ -68,7 +70,7 @@
 
 
                     <div class="col-md-10">
-                        <input type="text" class="form-control" id="valor" name="valor" placeholder="Valor R$,00, 00">
+                        <input type="text" class="form-control" id="valor" name="valor" placeholder="Valor R$,00, 00"  onkeyup="moeda(this)">
                     </div>
 
                     <div class="form-group">
