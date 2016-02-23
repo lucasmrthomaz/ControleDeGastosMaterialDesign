@@ -5,7 +5,7 @@
         </div>
         <div class="demo-graphs mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--8-col">
 
-            <form class="form-horizontal">
+            <form class="form-horizontal" action="receitas.php?acao=salvar" method="post">
                 <fieldset>
 
 
@@ -14,23 +14,25 @@
                         <label for="inputEmail" class="col-md-2 control-label">Nova: </label>
 
                         <div class="col-md-10">
-                            <input type="email" class="form-control" id="inputEmail" placeholder="Nova Despesa">
+                            <input type="text" name="recnova" class="form-control" id="inputEmail" placeholder="Nova Despesa">
                         </div>
                     </div>
 
                     <label for="chkbox2" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
                         Receita Existente
-                        <input type="checkbox" id="chkbox2" class="mdl-checkbox__input form-control">
+                        <input type="checkbox" name="ok" id="chkbox2" class="mdl-checkbox__input form-control">
                     </label>
+
+                    <input type="hidden" name="mod" value="{$mod}">
 
                     <div class="form-group">
                         <label for="conta" class="col-md-2 control-label">Existente</label>
                     </div>
                     <div class="col-md-10">
-                        <select name="conta" class="form-control">
-                            <option value="null">Despesas</option>
-                            <option value="1">Teste</option>
-                            <option value="2">Mimimi</option>
+                        <select name="recexistente" class="form-control"  name="receitarec">
+                            <option value="">Despesas</option>
+                            <option value="Teste">Teste</option>
+                            <option value="Mimimi">Mimimi</option>
                         </select>
                     </div>
 
@@ -40,25 +42,33 @@
                     <div class="col-md-10">
                         <select name="mes" class="form-control">
                             <option value="">Mês</option>
-                            <option value="JAN">Janeiro</option>
-                            <option value="FEV">Feveriro</option>
-                            <option value="MAR">Março</option>
-                            <option value="ABR">Abril</option>
-                            <option value="MAI">Maio</option>
-                            <option value="JUN">Junho</option>
-                            <option value="JUL">Julho</option>
-                            <option value="AGO">Agosto</option>
-                            <option value="SET">Setembro</option>
-                            <option value="OUT">Outubro</option>
-                            <option value="NOV">Novembro</option>
-                            <option value="DEZ">Dezembro</option>
+                            <option value="1">Janeiro</option>
+                            <option value="2">Feveriro</option>
+                            <option value="3">Março</option>
+                            <option value="4">Abril</option>
+                            <option value="5">Maio</option>
+                            <option value="6">Junho</option>
+                            <option value="7">Julho</option>
+                            <option value="8">Agosto</option>
+                            <option value="9">Setembro</option>
+                            <option value="10">Outubro</option>
+                            <option value="11">Novembro</option>
+                            <option value="12">Dezembro</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-10">
+                        <select name="ano" class="form-control">
+                            <option value="2016">2016</option>
+                            <option value="2015">2015</option>
+                            <option value="2014">2014</option>
                         </select>
                     </div>
 
 
 
                     <div class="col-md-10">
-                        <input type="text" class="form-control" id="inputPassword" placeholder="Valor R$,00, 00">
+                        <input type="text" class="form-control" id="valor" name="valor" placeholder="Valor R$,00, 00">
                     </div>
 
                     <div class="form-group">

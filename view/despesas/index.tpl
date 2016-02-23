@@ -5,10 +5,8 @@
         </div>
         <div class="demo-graphs mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--8-col">
 
-            <form class="form-horizontal">
+            <form class="form-horizontal" action="despesa.php?acao=salvar" method="post">
                 <fieldset>
-
-
                     <legend>Lançar Despesa</legend>
                     <div class="form-group">
                         <label for="inputEmail" class="col-md-2 control-label">Nova: </label>

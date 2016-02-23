@@ -19,33 +19,66 @@ class receitas extends controller {
 
     public function index($mod = null) {
 
-        if ($mod == 'RF') {
-            $this->receitaFixa();
-        } elseif ($mod = 'RV') {
-            $this->receitaVariavel();
+        $acao = isset($_REQUEST['acao']) ? $_REQUEST['acao'] : null;
+
+       //Define as ações 
+        if ($acao == null) {
+            if ($mod == 'RF') {
+                $this->receitaFixa($mod);
+            } elseif ($mod = 'RV') {
+                $this->receitaVariavel($mod);
+            }
+        } elseif ($acao == 'salvar') {
+            $data = $_POST;
+            $this->gravaReceita($data);
         }
     }
 
-    public function receitaFixa() {
+    public function receitaFixa($mod) {
         $titulo = 'Lançar Receita Fixa';
         $this->smarty->assign('titulo', $titulo);
+        $this->smarty->assign('mod', $mod);
         $header = $this->smarty->fetch('comum/head.tpl');
         $content = $this->smarty->fetch('receitas/index.tpl');
-
+        
         $this->smarty->assign('content', $content);
         $this->smarty->assign('header', $header);
         $this->smarty->display('comum/default.tpl');
     }
 
-    public function receitaVariavel() {
+    public function receitaVariavel($mod) {
         $titulo = 'Lançar Receita Varivável';
         $this->smarty->assign('titulo', $titulo);
+        $this->smarty->assign('mod', $mod);
         $header = $this->smarty->fetch('comum/head.tpl');
         $content = $this->smarty->fetch('receitas/index.tpl');
 
+        $this->smarty->assign('mod', $mod);
         $this->smarty->assign('content', $content);
         $this->smarty->assign('header', $header);
         $this->smarty->display('comum/default.tpl');
+    }
+
+    /**
+     * Trata e grava as receitas no banco
+     * @param type $data array
+     */
+    public function gravaReceita($data) {
+        
+        
+        //Verifica se será gravada uma receita nova ou existente
+        if (isset($data['ok']) && $data['ok'] == 'on') {
+            $data['despesa'] = $data['recexistente'];
+        } else{
+            $data['despesa'] = $data['recnova'];
+        }
+        
+        $model = new receitaModel();
+        $model->gravaReceita($data);
+        
+        $mod = $data['mod'];
+        header("Location: receitas.php?mod=$mod");
+        
     }
 
 }

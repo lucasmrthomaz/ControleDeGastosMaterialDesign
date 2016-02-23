@@ -11,7 +11,7 @@
  *
  * @author fabio
  */
-class modelBasico {
+class model {
     private $con;    
     protected $db;
     protected $host;    
@@ -21,9 +21,9 @@ class modelBasico {
 
     public function __construct() {
         $this->host = "localhost";
-        $this->db = "fabioalvaro13_dev";
+        $this->db = "livro";
         $this->user = "root";
-        $this->pass = "toor";
+        $this->pass = "";
         $this->con = mysql_connect($this->host, $this->user, $this->pass)
                 or trigger_error(mysql_error(), E_USER_ERROR);
         mysql_select_db($this->db, $this->con);        

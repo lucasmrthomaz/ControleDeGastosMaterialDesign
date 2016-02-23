@@ -177,9 +177,9 @@ return array(
     'despesas' => $baseDir . '/controller/despesasController.php',
     'home' => $baseDir . '/controller/home.php',
     'login' => $baseDir . '/controller/loginController.php',
-    'modelBasico' => $baseDir . '/model/modelBasico.php',
-    'modelDepartamento' => $baseDir . '/model/modelDepartamento.php',
+    'model' => $baseDir . '/model/model.php',
     'produtos' => $baseDir . '/controller/produtos.php',
+    'receitaModel' => $baseDir . '/model/receitaModel.php',
     'receitas' => $baseDir . '/controller/receitasController.php',
     'relatorios' => $baseDir . '/controller/relatoriosController.php',
 );
