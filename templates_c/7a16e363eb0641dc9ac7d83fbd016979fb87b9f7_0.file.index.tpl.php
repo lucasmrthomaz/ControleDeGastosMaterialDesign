@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-02-23 11:29:53
+/* Smarty version 3.1.29, created on 2016-02-23 19:59:30
   from "/var/www/html/ControleDeGastosMaterialDesign/view/relatorios/index.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_56cc6ce18459a2_64332064',
+  'unifunc' => 'content_56cce452d87c60_71209377',
   'file_dependency' => 
   array (
     '7a16e363eb0641dc9ac7d83fbd016979fb87b9f7' => 
     array (
       0 => '/var/www/html/ControleDeGastosMaterialDesign/view/relatorios/index.tpl',
-      1 => 1456237791,
+      1 => 1456268367,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_56cc6ce18459a2_64332064 ($_smarty_tpl) {
+function content_56cce452d87c60_71209377 ($_smarty_tpl) {
 ?>
 <main class="mdl-layout__content mdl-color--grey-100">
     <div class="mdl-grid demo-content">
@@ -28,25 +28,61 @@ function content_56cc6ce18459a2_64332064 ($_smarty_tpl) {
         </div>
         <div class="demo-graphs mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--8-col">
 
-            <form class="form-horizontal">
+            <form class="form-horizontal" method="post" action="relatorios.php?relatorio=gerar">
                 <fieldset>
-
-
-                    <legend>Selecione um período de tempo</legend>
-                    <div class="form-group">
-                        <label for="date1" class="col-md-2 control-label">De: </label>
-
-                        <div class="col-md-10">
-                            <input type="date" class="form-control" id="date1" placeholder="De:">
-                        </div>
+                     <legend>Selecione um período de tempo</legend>
+                     <br><br>
+                    
+                     <label for="ano">Selecione o ano</label>
+                    <div class="col-md-10">
+                        <select name="ano" class="form-control">
+                            <option value="2016">2016</option>
+                            <option value="2015">2015</option>
+                            <option value="2014">2014</option>
+                        </select>
                     </div>
 
                     <div class="form-group">
-                        <label for="date2" class="col-md-2 control-label">Até: </label>
+                        <label for="mes1" class="col-md-2 control-label">De: </label>
+                    </div>
+                    <div class="col-md-10">
+                        <select name="mes1" class="form-control">
+                            <option value="">Mês</option>
+                            <option value="1">Janeiro</option>
+                            <option value="2">Feveriro</option>
+                            <option value="3">Março</option>
+                            <option value="4">Abril</option>
+                            <option value="5">Maio</option>
+                            <option value="6">Junho</option>
+                            <option value="7">Julho</option>
+                            <option value="8">Agosto</option>
+                            <option value="9">Setembro</option>
+                            <option value="10">Outubro</option>
+                            <option value="11">Novembro</option>
+                            <option value="12">Dezembro</option>
+                        </select>
+                    </div>
 
-                        <div class="col-md-10">
-                            <input type="date" class="form-control" id="date2" placeholder="Até:">
-                        </div>
+
+                    <div class="form-group">
+                        <label for="mes2" class="col-md-2 control-label">Até: </label>
+                    </div>
+                    <div class="col-md-10">
+                        <select name="mes2" class="form-control">
+                            <option value="">Mês</option>
+                            <option value="1">Janeiro</option>
+                            <option value="2">Feveriro</option>
+                            <option value="3">Março</option>
+                            <option value="4">Abril</option>
+                            <option value="5">Maio</option>
+                            <option value="6">Junho</option>
+                            <option value="7">Julho</option>
+                            <option value="8">Agosto</option>
+                            <option value="9">Setembro</option>
+                            <option value="10">Outubro</option>
+                            <option value="11">Novembro</option>
+                            <option value="12">Dezembro</option>
+                        </select>
                     </div>
 
                     <div class="form-group">

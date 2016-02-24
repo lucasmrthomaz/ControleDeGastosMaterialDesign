@@ -27,8 +27,10 @@ class despesaModel extends model {
         $valor = $data['valor'];
         $mes = $data['mes'];
         $ano = $data['ano'];
-        $sql = "INSERT INTO {$this->tabpadrao} VALUES (NULL, '$descricao', '$tipo', '$valor', $mes, '$ano')";
-        mysql_query($sql);
+        $data = $data['data'];
+        $sql = "INSERT INTO {$this->tabpadrao} VALUES (NULL, '$descricao', '$tipo', '$valor', $mes, '$ano', $data)";
+        
+        mysql_query($sql) or die(mysql_error());
     }
 
     public function getDespesasExistentes() {
@@ -39,7 +41,20 @@ class despesaModel extends model {
         while ($result = mysql_fetch_assoc($sql)) {
             $registros[] = $result;
         }
+
+        return $registros;
+    }
+
+    public function getDespesabyTipo($where = null, $data) {
         
+        $sql = "SELECT * FROM $this->tabpadrao WHERE tipo = '$where'";
+        $sql = mysql_query($sql);
+        $registros = array();
+
+        while ($result = mysql_fetch_assoc($sql)) {
+            $registros[] = $result;
+        }
+
         return $registros;
     }
 

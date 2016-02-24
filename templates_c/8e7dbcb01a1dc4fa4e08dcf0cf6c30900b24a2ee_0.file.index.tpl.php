@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-02-23 17:35:32
+/* Smarty version 3.1.29, created on 2016-02-23 19:23:42
   from "/var/www/html/ControleDeGastosMaterialDesign/view/despesas/index.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_56ccc294088951_21032066',
+  'unifunc' => 'content_56ccdbeebc9ba9_27695872',
   'file_dependency' => 
   array (
     '8e7dbcb01a1dc4fa4e08dcf0cf6c30900b24a2ee' => 
     array (
       0 => '/var/www/html/ControleDeGastosMaterialDesign/view/despesas/index.tpl',
-      1 => 1456259715,
+      1 => 1456266220,
       2 => 'file',
     ),
   ),
@@ -19,12 +19,12 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_56ccc294088951_21032066 ($_smarty_tpl) {
+function content_56ccdbeebc9ba9_27695872 ($_smarty_tpl) {
 ?>
 <main class="mdl-layout__content mdl-color--grey-100">
     <div class="mdl-grid demo-content">
         <?php echo '<script'; ?>
- src="/files/js/despesas/valmoeda.js" type="text/javascript"><?php echo '</script'; ?>
+ src="/files/js/receitas/valmoeda.js" type="text/javascript"><?php echo '</script'; ?>
 >
         <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
             <h1><?php echo $_smarty_tpl->tpl_vars['titulo']->value;?>

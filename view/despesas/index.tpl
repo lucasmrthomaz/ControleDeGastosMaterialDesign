@@ -1,6 +1,6 @@
 <main class="mdl-layout__content mdl-color--grey-100">
     <div class="mdl-grid demo-content">
-        <script src="/files/js/despesas/valmoeda.js" type="text/javascript"></script>
+        <script src="/files/js/receitas/valmoeda.js" type="text/javascript"></script>
         <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
             <h1>{$titulo}</h1>
         </div>

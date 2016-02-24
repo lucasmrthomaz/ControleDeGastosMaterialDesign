@@ -1,12 +1,39 @@
+<?php
+/* Smarty version 3.1.29, created on 2016-02-23 19:36:22
+  from "/var/www/html/ControleDeGastosMaterialDesign/view/relatorios/relatorio.tpl" */
+
+if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
+  'has_nocache_code' => false,
+  'version' => '3.1.29',
+  'unifunc' => 'content_56ccdee681a6d2_73591843',
+  'file_dependency' => 
+  array (
+    '6d97cf122dcef513d6ad6785c2327e04e845a54d' => 
+    array (
+      0 => '/var/www/html/ControleDeGastosMaterialDesign/view/relatorios/relatorio.tpl',
+      1 => 1456266981,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_56ccdee681a6d2_73591843 ($_smarty_tpl) {
+echo $_smarty_tpl->tpl_vars['header']->value;?>
+
 <main class="mdl-layout__content mdl-color--grey-100">
     <div class="mdl-grid demo-content">
-        <script src="/files/js/receitas/valmoeda.js" type="text/javascript"></script>
+        <?php echo '<script'; ?>
+ src="/files/js/receitas/valmoeda.js" type="text/javascript"><?php echo '</script'; ?>
+>
         <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
-            <h1>{$titulo}</h1>
+            <h1><?php echo $_smarty_tpl->tpl_vars['titulo']->value;?>
+</h1>
         </div>
-        <div class="demo-graphs mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--8-col">
+        <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
 
-            <form class="form-horizontal" action="receitas.php?acao=salvar" method="post">
+            <form class="form-horizontal" action="relato.php?acao=salvar" method="post">
                 <fieldset>
 
 
@@ -24,19 +51,7 @@
                         <input type="checkbox" name="ok" id="chkbox2" class="mdl-checkbox__input form-control">
                     </label>
 
-                    <input type="hidden" name="mod" value="{$mod}">
-
-                    <div class="form-group">
-                        <label for="conta" class="col-md-2 control-label">Existente</label>
-                    </div>
-                    <div class="col-md-10">
-                        <select name="recexistente" class="form-control"  name="receitarec">
-                            <option value="">Receitas</option>
-                            {foreach $receitas as $num => $receita}
-                                <option value="{$receita.descricao}">{$receita.descricao}</option>
-                            {/foreach}
-                        </select>
-                    </div>
+                   
 
                     <div class="form-group">
                         <label for="mes" class="col-md-2 control-label">Mês</label>
@@ -44,15 +59,15 @@
                     <div class="col-md-10">
                         <select name="mes" class="form-control">
                             <option value="">Mês</option>
-                            <option value="01">Janeiro</option>
-                            <option value="02">Feveriro</option>
-                            <option value="03">Março</option>
-                            <option value="04">Abril</option>
-                            <option value="05">Maio</option>
-                            <option value="06">Junho</option>
-                            <option value="07">Julho</option>
-                            <option value="08">Agosto</option>
-                            <option value="09">Setembro</option>
+                            <option value="1">Janeiro</option>
+                            <option value="2">Feveriro</option>
+                            <option value="3">Março</option>
+                            <option value="4">Abril</option>
+                            <option value="5">Maio</option>
+                            <option value="6">Junho</option>
+                            <option value="7">Julho</option>
+                            <option value="8">Agosto</option>
+                            <option value="9">Setembro</option>
                             <option value="10">Outubro</option>
                             <option value="11">Novembro</option>
                             <option value="12">Dezembro</option>
@@ -82,20 +97,7 @@
                 </fieldset>
             </form>
         </div>
-        <div class="demo-cards mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-grid mdl-grid--no-spacing">
-            <div class="demo-updates mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--12-col-desktop">
-                <div class="mdl-card__title mdl-card--expand mdl-color--teal-300">
-                    <h2 class="mdl-card__title-text">Updates</h2>
-                </div>
-                <div class="mdl-card__supporting-text mdl-color-text--grey-600">
-                    Non dolore elit adipisicing ea reprehenderit consectetur culpa.
-                </div>
-                <div class="mdl-card__actions mdl-card--border">
-                    <a href="#" class="mdl-button mdl-js-button mdl-js-ripple-effect">Read More</a>
-                </div>
-            </div>
-            <div class="demo-separator mdl-cell--1-col"></div>
 
-        </div>
     </div>
-</main>
+</main><?php }
+}

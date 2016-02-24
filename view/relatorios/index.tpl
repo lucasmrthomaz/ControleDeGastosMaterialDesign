@@ -5,25 +5,61 @@
         </div>
         <div class="demo-graphs mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--8-col">
 
-            <form class="form-horizontal">
+            <form class="form-horizontal" method="post" action="relatorios.php?relatorio=gerar">
                 <fieldset>
-
-
-                    <legend>Selecione um período de tempo</legend>
-                    <div class="form-group">
-                        <label for="date1" class="col-md-2 control-label">De: </label>
-
-                        <div class="col-md-10">
-                            <input type="date" class="form-control" id="date1" placeholder="De:">
-                        </div>
+                     <legend>Selecione um período de tempo</legend>
+                     <br><br>
+                    
+                     <label for="ano">Selecione o ano</label>
+                    <div class="col-md-10">
+                        <select name="ano" class="form-control">
+                            <option value="2016">2016</option>
+                            <option value="2015">2015</option>
+                            <option value="2014">2014</option>
+                        </select>
                     </div>
 
                     <div class="form-group">
-                        <label for="date2" class="col-md-2 control-label">Até: </label>
+                        <label for="mes1" class="col-md-2 control-label">De: </label>
+                    </div>
+                    <div class="col-md-10">
+                        <select name="mes1" class="form-control">
+                            <option value="">Mês</option>
+                            <option value="1">Janeiro</option>
+                            <option value="2">Feveriro</option>
+                            <option value="3">Março</option>
+                            <option value="4">Abril</option>
+                            <option value="5">Maio</option>
+                            <option value="6">Junho</option>
+                            <option value="7">Julho</option>
+                            <option value="8">Agosto</option>
+                            <option value="9">Setembro</option>
+                            <option value="10">Outubro</option>
+                            <option value="11">Novembro</option>
+                            <option value="12">Dezembro</option>
+                        </select>
+                    </div>
 
-                        <div class="col-md-10">
-                            <input type="date" class="form-control" id="date2" placeholder="Até:">
-                        </div>
+
+                    <div class="form-group">
+                        <label for="mes2" class="col-md-2 control-label">Até: </label>
+                    </div>
+                    <div class="col-md-10">
+                        <select name="mes2" class="form-control">
+                            <option value="">Mês</option>
+                            <option value="01">Janeiro</option>
+                            <option value="02">Feveriro</option>
+                            <option value="03">Março</option>
+                            <option value="04">Abril</option>
+                            <option value="05">Maio</option>
+                            <option value="06">Junho</option>
+                            <option value="07">Julho</option>
+                            <option value="08">Agosto</option>
+                            <option value="09">Setembro</option>
+                            <option value="10">Outubro</option>
+                            <option value="11">Novembro</option>
+                            <option value="12">Dezembro</option>
+                        </select>
                     </div>
 
                     <div class="form-group">
