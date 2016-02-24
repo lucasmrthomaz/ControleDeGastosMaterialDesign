@@ -7,10 +7,10 @@
 
             <form class="form-horizontal" method="post" action="relatorios.php?relatorio=gerar">
                 <fieldset>
-                     <legend>Selecione um período de tempo</legend>
-                     <br><br>
-                    
-                     <label for="ano">Selecione o ano</label>
+                    <legend>Selecione um período de tempo</legend>
+                    <br><br>
+
+                    <label for="ano">Selecione o ano</label>
                     <div class="col-md-10">
                         <select name="ano" class="form-control">
                             <option value="2016">2016</option>
@@ -63,13 +63,12 @@
                     </div>
 
                     <div class="form-group">
-                        <div class="col-md-10 col-md-offset-2">                    
-                            <button type="submit" class="btn btn-primary">Visualizar</button>
-                            <button type="reset" class="btn btn-default">Cancel</button>
+                        <div class="col-md-10 col-md-offset-2"> 
+                            <button type="submit" class="btn btn-fab btn-fab-mini">
+                                <i class="material-icons">send</i>
+                            </button>
                         </div>
                     </div>
-
-
 
                 </fieldset>
             </form>

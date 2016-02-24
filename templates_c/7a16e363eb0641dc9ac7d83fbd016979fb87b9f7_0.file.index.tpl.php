@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-02-24 08:10:14
+/* Smarty version 3.1.29, created on 2016-02-24 11:11:31
   from "/var/www/html/ControleDeGastosMaterialDesign/view/relatorios/index.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_56cd8f96128470_41844251',
+  'unifunc' => 'content_56cdba135d96d8_91182372',
   'file_dependency' => 
   array (
     '7a16e363eb0641dc9ac7d83fbd016979fb87b9f7' => 
     array (
       0 => '/var/www/html/ControleDeGastosMaterialDesign/view/relatorios/index.tpl',
-      1 => 1456312203,
+      1 => 1456323089,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_56cd8f96128470_41844251 ($_smarty_tpl) {
+function content_56cdba135d96d8_91182372 ($_smarty_tpl) {
 ?>
 <main class="mdl-layout__content mdl-color--grey-100">
     <div class="mdl-grid demo-content">
@@ -30,10 +30,10 @@ function content_56cd8f96128470_41844251 ($_smarty_tpl) {
 
             <form class="form-horizontal" method="post" action="relatorios.php?relatorio=gerar">
                 <fieldset>
-                     <legend>Selecione um período de tempo</legend>
-                     <br><br>
-                    
-                     <label for="ano">Selecione o ano</label>
+                    <legend>Selecione um período de tempo</legend>
+                    <br><br>
+
+                    <label for="ano">Selecione o ano</label>
                     <div class="col-md-10">
                         <select name="ano" class="form-control">
                             <option value="2016">2016</option>
@@ -86,13 +86,12 @@ function content_56cd8f96128470_41844251 ($_smarty_tpl) {
                     </div>
 
                     <div class="form-group">
-                        <div class="col-md-10 col-md-offset-2">                    
-                            <button type="submit" class="btn btn-primary">Visualizar</button>
-                            <button type="reset" class="btn btn-default">Cancel</button>
+                        <div class="col-md-10 col-md-offset-2"> 
+                            <button type="submit" class="btn btn-fab btn-fab-mini">
+                                <i class="material-icons">send</i>
+                            </button>
                         </div>
                     </div>
-
-
 
                 </fieldset>
             </form>
