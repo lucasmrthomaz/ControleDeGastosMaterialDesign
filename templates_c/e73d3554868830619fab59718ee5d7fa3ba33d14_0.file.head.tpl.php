@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-02-23 10:05:48
+/* Smarty version 3.1.29, created on 2016-02-24 09:37:48
   from "/var/www/html/ControleDeGastosMaterialDesign/view/comum/head.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_56cc592c953d32_94474976',
+  'unifunc' => 'content_56cda41c26a639_23297619',
   'file_dependency' => 
   array (
     'e73d3554868830619fab59718ee5d7fa3ba33d14' => 
     array (
       0 => '/var/www/html/ControleDeGastosMaterialDesign/view/comum/head.tpl',
-      1 => 1456232635,
+      1 => 1456317451,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_56cc592c953d32_94474976 ($_smarty_tpl) {
+function content_56cda41c26a639_23297619 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -45,12 +45,11 @@ function content_56cc592c953d32_94474976 ($_smarty_tpl) {
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="">
-        <meta name="author" content="">
-
+        
+        
         <link href="/files/material/material.css" rel="stylesheet" type="text/css"/>
         <link href="/files/material/material.min.css" rel="stylesheet" type="text/css"/>
-
+        <link href="../../files/css/ripples.min.css" rel="stylesheet" type="text/css"/>
         <link href="/files/css/bootstrap-theme.css" rel="stylesheet" type="text/css"/>
         <link href="/files/css/bootstrap-material-design.css" rel="stylesheet" type="text/css"/>
 

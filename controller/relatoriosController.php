@@ -39,14 +39,16 @@ class relatorios extends controller {
         $model = new receitaModel();
         $RV = $model->getReceitasbyTipo('RV', $data);
         $RF = $model->getReceitasbyTipo('RF', $data);
-        
-        
+              
         //Pega as despesas
         $model2 = new despesaModel();
         $DV = $model2->getDespesabyTipo('DV', $data);
         $DF = $model2->getDespesabyTipo('DF', $data);
        
- 
+        $this->smarty->assign('RVs', $RV);
+        $this->smarty->assign('RFs', $RF);
+        $this->smarty->assign('DVs', $DV);
+        $this->smarty->assign('DFs', $DF);
         
         $titulo = 'Relatório de Gastos';
         $this->smarty->assign('titulo', $titulo);

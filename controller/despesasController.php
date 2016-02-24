@@ -111,7 +111,11 @@ class despesas extends controller {
 
         return $data;
     }
-
+    
+    /**
+     * Pega as despesas existentes no banco de dados
+     * @return type
+     */
     public function pegaDespesas() {
         $model = new despesaModel();
         return $model->getDespesasExistentes();

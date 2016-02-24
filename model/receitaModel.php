@@ -45,7 +45,10 @@ class receitaModel extends model {
     }
 
     public function getReceitasbyTipo($where = null, $data) {
-        $sql = "SELECT * FROM $this->tabpadrao WHERE tipo = '$where'";
+        $data1 = $data['data1'];
+        $data2 = $data['data2'];
+        $sql = "SELECT * FROM $this->tabpadrao WHERE tipo = '$where' AND lancamento BETWEEN '$data1' AND '$data2'";
+        
         $sql = mysql_query($sql);
         $registros = array();
 
@@ -53,6 +56,7 @@ class receitaModel extends model {
             $registros[] = $result;
         }
 
+        //var_dump($registros); die();
         return $registros;
     }
 

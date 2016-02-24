@@ -46,8 +46,10 @@ class despesaModel extends model {
     }
 
     public function getDespesabyTipo($where = null, $data) {
+        $data1 = $data['data1'];
+        $data2 = $data['data2'];
         
-        $sql = "SELECT * FROM $this->tabpadrao WHERE tipo = '$where'";
+        $sql = "SELECT * FROM $this->tabpadrao WHERE tipo = '$where' AND lancamento BETWEEN '$data1' AND '$data2'";
         $sql = mysql_query($sql);
         $registros = array();
 

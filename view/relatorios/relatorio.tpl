@@ -1,7 +1,7 @@
 {$header}
 <main class="mdl-layout__content mdl-color--grey-100">
+    <link href="/files/css/bootstrap.css" rel="stylesheet" type="text/css"/>
     <div class="mdl-grid demo-content">
-        <script src="/files/js/receitas/valmoeda.js" type="text/javascript"></script>
         <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
             <h1>{$titulo}</h1>
         </div>
@@ -11,63 +11,125 @@
                 <fieldset>
 
 
-                    <legend>Lançar Receita</legend>
-                    <div class="form-group">
-                        <label for="inputEmail" class="col-md-2 control-label">Nova: </label>
+                    <legend>Período: xx-xx-xxxx até xx-xx-xxxx</legend>
 
-                        <div class="col-md-10">
-                            <input type="text" name="recnova" class="form-control" id="inputEmail" placeholder="Nova Despesa">
-                        </div>
-                    </div>
+                    <table class="table table-responsive table-hover ">
+                        <legend>Receita Fixa</legend>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Descrição</th>
+                                <th>Mês</th>
+                                <th>Ano</th>
+                                <th>Valor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {foreach $RFs as $key=>$RF}
+                                <tr>
+                                    <td>{$RF.id}</td>
+                                    <td>{$RF.descricao}</td>
+                                    <td>{$RF.mes}</td>
+                                    <td>{$RF.ano}</td>
+                                    <td>R$ {$RF.valor}</td>
+                                </tr>
+                            {foreachelse}    
+                                <tr class="warning">    
+                                    <td>Nenhum registro encontrado...</td>
+                                </tr>
+                            {/foreach}
 
-                    <label for="chkbox2" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                        Receita Existente
-                        <input type="checkbox" name="ok" id="chkbox2" class="mdl-checkbox__input form-control">
-                    </label>
+                        </tbody>
+                    </table>
 
-                   
+                    <table class="table table-responsive table-hover ">
+                        <legend>Receita Variada</legend>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Descrição</th>
+                                <th>Mês</th>
+                                <th>Ano</th>
+                                <th>Valor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {foreach $RVs as $key=>$RV}
+                                <tr>
+                                    <td>{$RV.id}</td>
+                                    <td>{$RV.descricao}</td>
+                                    <td>{$RV.mes}</td>
+                                    <td>{$RV.ano}</td>
+                                    <td>R$ {$RV.valor}</td>
+                                </tr>
+                            {foreachelse}    
+                                <tr class="warning">    
+                                    <td colspan="5">Nenhum registro encontrado...</td>
+                                </tr>
+                            {/foreach}
 
-                    <div class="form-group">
-                        <label for="mes" class="col-md-2 control-label">Mês</label>
-                    </div>
-                    <div class="col-md-10">
-                        <select name="mes" class="form-control">
-                            <option value="">Mês</option>
-                            <option value="1">Janeiro</option>
-                            <option value="2">Feveriro</option>
-                            <option value="3">Março</option>
-                            <option value="4">Abril</option>
-                            <option value="5">Maio</option>
-                            <option value="6">Junho</option>
-                            <option value="7">Julho</option>
-                            <option value="8">Agosto</option>
-                            <option value="9">Setembro</option>
-                            <option value="10">Outubro</option>
-                            <option value="11">Novembro</option>
-                            <option value="12">Dezembro</option>
-                        </select>
-                    </div>
+                        </tbody>
+                    </table>
 
-                    <div class="col-md-10">
-                        <select name="ano" class="form-control">
-                            <option value="2016">2016</option>
-                            <option value="2015">2015</option>
-                            <option value="2014">2014</option>
-                        </select>
-                    </div>
+                    <table class="table table-responsive table-hover ">
+                        <legend>Despesa Fixa</legend>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Descrição</th>
+                                <th>Mês</th>
+                                <th>Ano</th>
+                                <th>Valor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {foreach $DFs as $key=>$DF}
+                                <tr>
+                                    <td>{$DF.id}</td>
+                                    <td>{$DF.descricao}</td>
+                                    <td>{$DF.mes}</td>
+                                    <td>{$DF.ano}</td>
+                                    <td>R$ {$DF.valor}</td>
+                                </tr>
+                            {foreachelse}    
+                                <tr class="warning">    
+                                    <td colspan="5">Nenhum registro encontrado...</td>
+                                </tr>
+                            {/foreach}
+
+                        </tbody>
+                    </table>        
+
+                    <table class="table table-striped table-hover ">
+                        <legend>Despesa Variada</legend>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Descrição</th>
+                                <th>Mês</th>
+                                <th>Ano</th>
+                                <th>Valor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {foreach $DVs as $key=>$DV}
+                                <tr>
+                                    <td>{$DV.id}</td>
+                                    <td>{$DV.descricao}</td>
+                                    <td>{$DV.mes}</td>
+                                    <td>{$DV.ano}</td>
+                                    <td>R$ {$DV.valor}</td>
+                                </tr>
+                            {foreachelse}    
+                                <tr class="warning">    
+                                    <td colspan="5">Nenhum registro encontrado...</td>
+                                </tr>
+                            {/foreach}
+
+                        </tbody>
+                    </table>        
 
 
-
-                    <div class="col-md-10">
-                        <input type="text" class="form-control" id="valor" name="valor" placeholder="Valor R$,00, 00"  onkeyup="moeda(this)">
-                    </div>
-
-                    <div class="form-group">
-                        <div class="col-md-10 col-md-offset-2">                    
-                            <button type="submit" class="btn btn-primary">Gravar</button>
-                            <button type="reset" class="btn btn-default">Cancel</button>
-                        </div>
-                    </div>
                 </fieldset>
             </form>
         </div>
