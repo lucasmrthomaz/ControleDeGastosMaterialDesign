@@ -29,7 +29,7 @@ class despesaModel extends model {
         $ano = $data['ano'];
         $data = $data['data'];
         $sql = "INSERT INTO {$this->tabpadrao} VALUES (NULL, '$descricao', '$tipo', '$valor', $mes, '$ano', $data)";
-        
+
         mysql_query($sql) or die(mysql_error());
     }
 
@@ -48,7 +48,7 @@ class despesaModel extends model {
     public function getDespesabyTipo($where = null, $data) {
         $data1 = $data['data1'];
         $data2 = $data['data2'];
-        
+
         $sql = "SELECT * FROM $this->tabpadrao WHERE tipo = '$where' AND lancamento BETWEEN '$data1' AND '$data2'";
         $sql = mysql_query($sql);
         $registros = array();
@@ -58,6 +58,22 @@ class despesaModel extends model {
         }
 
         return $registros;
+    }
+
+    /**
+     * Retorna a soma de todos os valores digitados entre as datas escolhidas
+     * @param type $where parâmetros de pesquisa 'RV' ou 'RF'
+     * @param type $data array com as datas que serão usadas para a consulta
+     */
+    public function getDespesaTotalbyTipo($where, $data) {
+        $data1 = $data['data1'];
+        $data2 = $data['data2'];
+
+        $sql = "SELECT ROUND(SUM(valor), 2) as total FROM $this->tabpadrao WHERE tipo = '$where' AND lancamento BETWEEN '$data1' AND '$data2'";
+
+        $sql = mysql_query($sql);
+        $result = mysql_fetch_assoc($sql);
+        return $result;
     }
 
     private function setTab() {

@@ -50,11 +50,22 @@ class relatorios extends controller {
         
         $totalDV = $model2->getDespesaTotalbyTipo('DV', $data);
         $totalDF = $model2->getDespesaTotalbyTipo('DF', $data);
+        
+        $totalReceitas = $totalRV + $totalRF;
+        $totalDespesas = $totalDV + $totalDF;
+        
+        //$saldoperiodo = $totalReceitas - $totalDespesas;
        
         $this->smarty->assign('RVs', $RV);
         $this->smarty->assign('RFs', $RF);
         $this->smarty->assign('DVs', $DV);
         $this->smarty->assign('DFs', $DF);
+        $this->smarty->assign('totalRV', $totalRV);
+        $this->smarty->assign('totalRF', $totalRF);
+        $this->smarty->assign('totalDV', $totalDV);
+        $this->smarty->assign('totalDF', $totalDF);
+        $this->smarty->assign('totalReceitas', $totalReceitas);
+        $this->smarty->assign('totalDespesas', $totalDespesas);
         
         $titulo = 'Relatório de Gastos';
         $this->smarty->assign('titulo', $titulo);
@@ -62,6 +73,8 @@ class relatorios extends controller {
         $header = $this->smarty->fetch('comum/head.tpl');
         $this->smarty->assign('header', $header);
         $this->smarty->display('relatorios/relatorio.tpl');
+        
+
     }
 
 }

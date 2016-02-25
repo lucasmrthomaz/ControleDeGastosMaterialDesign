@@ -38,6 +38,13 @@
                                     <td>Nenhum registro encontrado...</td>
                                 </tr>
                             {/foreach}
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>Total RF: </td>
+                                <td>R$ {$totalRF.total}</td>
+                            </tr>
 
                         </tbody>
                     </table>
@@ -67,6 +74,13 @@
                                     <td colspan="5">Nenhum registro encontrado...</td>
                                 </tr>
                             {/foreach}
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>Total RV: </td>
+                                <td>R$ {$totalRV.total}</td>
+                            </tr>
 
                         </tbody>
                     </table>
@@ -96,11 +110,18 @@
                                     <td colspan="5">Nenhum registro encontrado...</td>
                                 </tr>
                             {/foreach}
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>Total DF: </td>
+                                <td>R$ {$totalDF.total}</td>
+                            </tr>
 
                         </tbody>
                     </table>        
 
-                    <table class="table table-striped table-hover ">
+                    <table class="table table-responsive table-hover ">
                         <legend>Despesa Variada</legend>
                         <thead>
                             <tr>
@@ -125,6 +146,13 @@
                                     <td colspan="5">Nenhum registro encontrado...</td>
                                 </tr>
                             {/foreach}
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>Total DV: </td>
+                                <td>R$ {$totalDV.total}</td>
+                            </tr>
 
                         </tbody>
                     </table>        

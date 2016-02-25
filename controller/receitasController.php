@@ -105,6 +105,7 @@ class receitas extends controller {
         }
 
         //Trata as virgulas para serem inseridas no MySQL
+        $data['valor'] = str_replace(".", "", $data['valor']);
         $data['valor'] = str_replace(",", ".", $data['valor']);
         
         $data['data'] = "'{$data['ano']}-{$data['mes']}-01'";

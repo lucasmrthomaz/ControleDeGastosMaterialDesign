@@ -59,17 +59,28 @@ class receitaModel extends model {
         //var_dump($registros); die();
         return $registros;
     }
-
+    
+    
+    /**
+     * Retorna a soma de todos os valores digitados entre as datas escolhidas
+     * @param type $where parâmetros de pesquisa 'RV' ou 'RF'
+     * @param type $data array com as datas que serão usadas para a consulta
+     */
     public function getReceitasTotalbyTipo($where, $data) {
         $data1 = $data['data1'];
         $data2 = $data['data2'];
         
-        $sql = "SELECT SUM(valor) FROM $this->tabpadrao WHERE tupo = '$where' AND lancamento BETWEEN '$data1' AND '$data2'";
-        $sql = mysql_query($sql);
+        $sql = "SELECT ROUND(SUM(valor), 2) as total FROM $this->tabpadrao WHERE tipo = '$where' AND lancamento BETWEEN '$data1' AND '$data2'";
         
-        var_dump($sql); die();
+        $sql = mysql_query($sql);
+        return mysql_fetch_assoc($sql);
+        
+        
     }
 
+    /**
+     * Seta a tab padrão
+     */
     private function setTab() {
         $this->tabpadrao = 'receita';
     }

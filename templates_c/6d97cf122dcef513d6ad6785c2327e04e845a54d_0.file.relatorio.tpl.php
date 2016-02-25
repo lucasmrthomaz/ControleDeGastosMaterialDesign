@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-02-24 10:02:51
+/* Smarty version 3.1.29, created on 2016-02-25 08:45:12
   from "/var/www/html/ControleDeGastosMaterialDesign/view/relatorios/relatorio.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_56cda9fb96c9a7_30812729',
+  'unifunc' => 'content_56cee9488e2fe0_36934865',
   'file_dependency' => 
   array (
     '6d97cf122dcef513d6ad6785c2327e04e845a54d' => 
     array (
       0 => '/var/www/html/ControleDeGastosMaterialDesign/view/relatorios/relatorio.tpl',
-      1 => 1456318961,
+      1 => 1456400708,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_56cda9fb96c9a7_30812729 ($_smarty_tpl) {
+function content_56cee9488e2fe0_36934865 ($_smarty_tpl) {
 echo $_smarty_tpl->tpl_vars['header']->value;?>
 
 <main class="mdl-layout__content mdl-color--grey-100">
@@ -92,6 +92,14 @@ if ($__foreach_RF_0_saved_key) {
 $_smarty_tpl->tpl_vars['key'] = $__foreach_RF_0_saved_key;
 }
 ?>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>Total RF: </td>
+                                <td>R$ <?php echo $_smarty_tpl->tpl_vars['totalRF']->value['total'];?>
+</td>
+                            </tr>
 
                         </tbody>
                     </table>
@@ -151,6 +159,14 @@ if ($__foreach_RV_1_saved_key) {
 $_smarty_tpl->tpl_vars['key'] = $__foreach_RV_1_saved_key;
 }
 ?>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>Total RV: </td>
+                                <td>R$ <?php echo $_smarty_tpl->tpl_vars['totalRV']->value['total'];?>
+</td>
+                            </tr>
 
                         </tbody>
                     </table>
@@ -210,11 +226,19 @@ if ($__foreach_DF_2_saved_key) {
 $_smarty_tpl->tpl_vars['key'] = $__foreach_DF_2_saved_key;
 }
 ?>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>Total DF: </td>
+                                <td>R$ <?php echo $_smarty_tpl->tpl_vars['totalDF']->value['total'];?>
+</td>
+                            </tr>
 
                         </tbody>
                     </table>        
 
-                    <table class="table table-striped table-hover ">
+                    <table class="table table-responsive table-hover ">
                         <legend>Despesa Variada</legend>
                         <thead>
                             <tr>
@@ -269,6 +293,14 @@ if ($__foreach_DV_3_saved_key) {
 $_smarty_tpl->tpl_vars['key'] = $__foreach_DV_3_saved_key;
 }
 ?>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>Total DV: </td>
+                                <td>R$ <?php echo $_smarty_tpl->tpl_vars['totalDV']->value['total'];?>
+</td>
+                            </tr>
 
                         </tbody>
                     </table>        
