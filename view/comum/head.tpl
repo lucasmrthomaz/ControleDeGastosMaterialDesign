@@ -26,7 +26,7 @@
         
         <link href="/files/material/material.css" rel="stylesheet" type="text/css"/>
         <link href="/files/material/material.min.css" rel="stylesheet" type="text/css"/>
-        <link href="../../files/css/ripples.min.css" rel="stylesheet" type="text/css"/>
+        <link href="/files/css/ripples.min.css" rel="stylesheet" type="text/css"/>
         <link href="/files/css/bootstrap-theme.css" rel="stylesheet" type="text/css"/>
         <link href="/files/css/bootstrap-material-design.css" rel="stylesheet" type="text/css"/>
 
@@ -36,15 +36,14 @@
 
 
         <!--JAVASCRIPT -->
+        <script src="/files/js/jquery.js" type="text/javascript"></script>
+        <script src="/files/js/ripples.js" type="text/javascript"></script>
+        <script src="/files/material/material.min.js" type="text/javascript"></script>
+        <script src="/files/js/bootstrap.js" type="text/javascript"></script>
+        <script src="/files/js/material.js" type="text/javascript"></script>
 
-        <script src="../../files/js/jquery.js" type="text/javascript"></script>
-        <script src="../../files/js/ripples.js" type="text/javascript"></script>
-        <script src="../../files/material/material.min.js" type="text/javascript"></script>
-        <script src="../../files/js/bootstrap.js" type="text/javascript"></script>
-        <script src="../../files/js/material.js" type="text/javascript"></script>
 
-
-        <link href="../../files/css/signin.css" rel="stylesheet" type="text/css"/>
+        <link href="/files/css/signin.css" rel="stylesheet" type="text/css"/>
 
         <title>Controle de Gastos Fox </title>
 

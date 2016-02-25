@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-02-24 09:37:48
+/* Smarty version 3.1.29, created on 2016-02-25 14:19:03
   from "/var/www/html/ControleDeGastosMaterialDesign/view/comum/head.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_56cda41c26a639_23297619',
+  'unifunc' => 'content_56cf3787dd9ec0_29311759',
   'file_dependency' => 
   array (
     'e73d3554868830619fab59718ee5d7fa3ba33d14' => 
     array (
       0 => '/var/www/html/ControleDeGastosMaterialDesign/view/comum/head.tpl',
-      1 => 1456317451,
+      1 => 1456420598,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_56cda41c26a639_23297619 ($_smarty_tpl) {
+function content_56cf3787dd9ec0_29311759 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -49,7 +49,7 @@ function content_56cda41c26a639_23297619 ($_smarty_tpl) {
         
         <link href="/files/material/material.css" rel="stylesheet" type="text/css"/>
         <link href="/files/material/material.min.css" rel="stylesheet" type="text/css"/>
-        <link href="../../files/css/ripples.min.css" rel="stylesheet" type="text/css"/>
+        <link href="/files/css/ripples.min.css" rel="stylesheet" type="text/css"/>
         <link href="/files/css/bootstrap-theme.css" rel="stylesheet" type="text/css"/>
         <link href="/files/css/bootstrap-material-design.css" rel="stylesheet" type="text/css"/>
 
@@ -59,25 +59,24 @@ function content_56cda41c26a639_23297619 ($_smarty_tpl) {
 
 
         <!--JAVASCRIPT -->
+        <?php echo '<script'; ?>
+ src="/files/js/jquery.js" type="text/javascript"><?php echo '</script'; ?>
+>
+        <?php echo '<script'; ?>
+ src="/files/js/ripples.js" type="text/javascript"><?php echo '</script'; ?>
+>
+        <?php echo '<script'; ?>
+ src="/files/material/material.min.js" type="text/javascript"><?php echo '</script'; ?>
+>
+        <?php echo '<script'; ?>
+ src="/files/js/bootstrap.js" type="text/javascript"><?php echo '</script'; ?>
+>
+        <?php echo '<script'; ?>
+ src="/files/js/material.js" type="text/javascript"><?php echo '</script'; ?>
+>
 
-        <?php echo '<script'; ?>
- src="../../files/js/jquery.js" type="text/javascript"><?php echo '</script'; ?>
->
-        <?php echo '<script'; ?>
- src="../../files/js/ripples.js" type="text/javascript"><?php echo '</script'; ?>
->
-        <?php echo '<script'; ?>
- src="../../files/material/material.min.js" type="text/javascript"><?php echo '</script'; ?>
->
-        <?php echo '<script'; ?>
- src="../../files/js/bootstrap.js" type="text/javascript"><?php echo '</script'; ?>
->
-        <?php echo '<script'; ?>
- src="../../files/js/material.js" type="text/javascript"><?php echo '</script'; ?>
->
 
-
-        <link href="../../files/css/signin.css" rel="stylesheet" type="text/css"/>
+        <link href="/files/css/signin.css" rel="stylesheet" type="text/css"/>
 
         <title>Controle de Gastos Fox </title>
 

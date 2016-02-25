@@ -56,8 +56,7 @@ class relatorios extends controller {
         
         $saldoperiodo = $totalReceitas - $totalDespesas;
           
-       
-       
+              
         $this->smarty->assign('RVs', $RV);
         $this->smarty->assign('RFs', $RF);
         $this->smarty->assign('DVs', $DV);
@@ -77,7 +76,12 @@ class relatorios extends controller {
         $this->smarty->assign('header', $header);
         $this->smarty->display('relatorios/relatorio.tpl');
         
-
+    }
+    
+    function getGrafico () {
+        
+        
+        
     }
 
 }

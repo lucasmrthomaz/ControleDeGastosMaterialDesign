@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-02-25 09:11:07
+/* Smarty version 3.1.29, created on 2016-02-25 14:26:20
   from "/var/www/html/ControleDeGastosMaterialDesign/view/relatorios/relatorio.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_56ceef5b88c778_13981490',
+  'unifunc' => 'content_56cf393c1c5cc5_01976234',
   'file_dependency' => 
   array (
     '6d97cf122dcef513d6ad6785c2327e04e845a54d' => 
     array (
       0 => '/var/www/html/ControleDeGastosMaterialDesign/view/relatorios/relatorio.tpl',
-      1 => 1456402264,
+      1 => 1456421176,
       2 => 'file',
     ),
   ),
@@ -19,10 +19,17 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_56ceef5b88c778_13981490 ($_smarty_tpl) {
+function content_56cf393c1c5cc5_01976234 ($_smarty_tpl) {
 echo $_smarty_tpl->tpl_vars['header']->value;?>
 
 <main class="mdl-layout__content mdl-color--grey-100">
+    <?php echo '<script'; ?>
+ src="/files/js/loader.js" type="text/javascript"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="/files/js/relatorio.js" type="text/javascript"><?php echo '</script'; ?>
+>
+    
     <link href="/files/css/bootstrap.css" rel="stylesheet" type="text/css"/>
     <div class="mdl-grid demo-content">
         <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
@@ -106,6 +113,7 @@ $_smarty_tpl->tpl_vars['key'] = $__foreach_RF_0_saved_key;
 
                     <table class="table table-responsive table-hover ">
                         <legend>Receita Variada</legend>
+                        
                         <thead>
                             <tr>
                                 <th>#</th>
@@ -324,7 +332,23 @@ $_smarty_tpl->tpl_vars['key'] = $__foreach_DV_3_saved_key;
                         <tbody>
                         </tbody>
                     </table>
-
+                    <input type="hidden" name="totalRV" id="totalreceita" value="<?php echo $_smarty_tpl->tpl_vars['totalReceitas']->value;?>
+">
+                    <input type="hidden" name="totalRV" id="totaldespesa" value="<?php echo $_smarty_tpl->tpl_vars['totalDespesas']->value;?>
+">
+                            
+                    <input type="hidden" name="totalRV" id="totalRV" value="<?php echo $_smarty_tpl->tpl_vars['totalRV']->value['total'];?>
+">
+                    <input type="hidden" name="totalRF" id="totalRF" value="<?php echo $_smarty_tpl->tpl_vars['totalRF']->value['total'];?>
+">
+                    
+                    <input type="hidden" name="totalDV" id="totalDV" value="<?php echo $_smarty_tpl->tpl_vars['totalDV']->value['total'];?>
+">
+                    <input type="hidden" name="totalDF" id="totalDF" value="<?php echo $_smarty_tpl->tpl_vars['totalDF']->value['total'];?>
+">
+                    <legend>Gráficos e Relatórios</legend>
+                    <div id="tipogasto" style="width: 900px; height: 500px;"></div>
+                    <div id="saldoview" style="width: 900px; height: 500px;"></div>
 
 
                 </fieldset>

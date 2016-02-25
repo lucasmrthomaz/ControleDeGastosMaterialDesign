@@ -1,5 +1,8 @@
 {$header}
 <main class="mdl-layout__content mdl-color--grey-100">
+    <script src="/files/js/loader.js" type="text/javascript"></script>
+    <script src="/files/js/relatorio.js" type="text/javascript"></script>
+    
     <link href="/files/css/bootstrap.css" rel="stylesheet" type="text/css"/>
     <div class="mdl-grid demo-content">
         <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
@@ -51,6 +54,7 @@
 
                     <table class="table table-responsive table-hover ">
                         <legend>Receita Variada</legend>
+                        
                         <thead>
                             <tr>
                                 <th>#</th>
@@ -173,7 +177,17 @@
                         <tbody>
                         </tbody>
                     </table>
-
+                    <input type="hidden" name="totalRV" id="totalreceita" value="{$totalReceitas}">
+                    <input type="hidden" name="totalRV" id="totaldespesa" value="{$totalDespesas}">
+                            
+                    <input type="hidden" name="totalRV" id="totalRV" value="{$totalRV.total}">
+                    <input type="hidden" name="totalRF" id="totalRF" value="{$totalRF.total}">
+                    
+                    <input type="hidden" name="totalDV" id="totalDV" value="{$totalDV.total}">
+                    <input type="hidden" name="totalDF" id="totalDF" value="{$totalDF.total}">
+                    <legend>Gráficos e Relatórios</legend>
+                    <div id="tipogasto" style="width: 900px; height: 500px;"></div>
+                    <div id="saldoview" style="width: 900px; height: 500px;"></div>
 
 
                 </fieldset>
