@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-02-25 08:45:12
+/* Smarty version 3.1.29, created on 2016-02-25 09:11:07
   from "/var/www/html/ControleDeGastosMaterialDesign/view/relatorios/relatorio.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_56cee9488e2fe0_36934865',
+  'unifunc' => 'content_56ceef5b88c778_13981490',
   'file_dependency' => 
   array (
     '6d97cf122dcef513d6ad6785c2327e04e845a54d' => 
     array (
       0 => '/var/www/html/ControleDeGastosMaterialDesign/view/relatorios/relatorio.tpl',
-      1 => 1456400708,
+      1 => 1456402264,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_56cee9488e2fe0_36934865 ($_smarty_tpl) {
+function content_56ceef5b88c778_13981490 ($_smarty_tpl) {
 echo $_smarty_tpl->tpl_vars['header']->value;?>
 
 <main class="mdl-layout__content mdl-color--grey-100">
@@ -301,9 +301,30 @@ $_smarty_tpl->tpl_vars['key'] = $__foreach_DV_3_saved_key;
                                 <td>R$ <?php echo $_smarty_tpl->tpl_vars['totalDV']->value['total'];?>
 </td>
                             </tr>
-
                         </tbody>
                     </table>        
+
+                    <table class="table table-responsive table-hover ">
+                        <legend>Saldo do Período</legend>
+                        <thead>
+                            <tr>
+                                <th>Total de Receitas do Período</th>
+                                <th>Total de Despesas do Período</th>
+                                <th>Saldo do Período</th>
+                            </tr>
+                            <tr>
+                                <td>R$ <?php echo $_smarty_tpl->tpl_vars['totalReceitas']->value;?>
+</td>
+                                <td>R$ <?php echo $_smarty_tpl->tpl_vars['totalDespesas']->value;?>
+</td>
+                                <td>R$ <?php echo $_smarty_tpl->tpl_vars['saldoperiodo']->value;?>
+</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+
 
 
                 </fieldset>

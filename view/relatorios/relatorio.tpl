@@ -153,9 +153,27 @@
                                 <td>Total DV: </td>
                                 <td>R$ {$totalDV.total}</td>
                             </tr>
-
                         </tbody>
                     </table>        
+
+                    <table class="table table-responsive table-hover ">
+                        <legend>Saldo do Período</legend>
+                        <thead>
+                            <tr>
+                                <th>Total de Receitas do Período</th>
+                                <th>Total de Despesas do Período</th>
+                                <th>Saldo do Período</th>
+                            </tr>
+                            <tr>
+                                <td>R$ {$totalReceitas}</td>
+                                <td>R$ {$totalDespesas}</td>
+                                <td>R$ {$saldoperiodo}</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+
 
 
                 </fieldset>
