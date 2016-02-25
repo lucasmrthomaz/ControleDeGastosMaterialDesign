@@ -51,10 +51,12 @@ class relatorios extends controller {
         $totalDV = $model2->getDespesaTotalbyTipo('DV', $data);
         $totalDF = $model2->getDespesaTotalbyTipo('DF', $data);
         
-        $totalReceitas = $totalRV + $totalRF;
-        $totalDespesas = $totalDV + $totalDF;
+        $totalReceitas = $totalRV['total'] + $totalRF['total'];
+        $totalDespesas = $totalDV['total'] + $totalDF['total'];
         
-        //$saldoperiodo = $totalReceitas - $totalDespesas;
+        $saldoperiodo = $totalReceitas - $totalDespesas;
+          
+       
        
         $this->smarty->assign('RVs', $RV);
         $this->smarty->assign('RFs', $RF);
@@ -66,6 +68,7 @@ class relatorios extends controller {
         $this->smarty->assign('totalDF', $totalDF);
         $this->smarty->assign('totalReceitas', $totalReceitas);
         $this->smarty->assign('totalDespesas', $totalDespesas);
+        $this->smarty->assign('saldoperiodo', $saldoperiodo);
         
         $titulo = 'Relatório de Gastos';
         $this->smarty->assign('titulo', $titulo);
