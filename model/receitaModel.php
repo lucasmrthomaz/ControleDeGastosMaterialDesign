@@ -28,7 +28,7 @@ class receitaModel extends model {
         $mes = $data['mes'];
         $ano = $data['ano'];
         $data = $data['data'];
-        $sql = "INSERT INTO {$this->tabpadrao} VALUES (NULL, '$descricao', '$tipo', '$valor', $mes, '$ano', $data)";
+        $sql = "INSERT INTO {$this->tabpadrao} VALUES (NULL, '$descricao', '$tipo', '$valor', $mes, '$ano', $data) ORDER BY id";
         mysql_query($sql);
     }
 
@@ -47,7 +47,7 @@ class receitaModel extends model {
     public function getReceitasbyTipo($where = null, $data) {
         $data1 = $data['data1'];
         $data2 = $data['data2'];
-        $sql = "SELECT * FROM $this->tabpadrao WHERE tipo = '$where' AND lancamento BETWEEN '$data1' AND '$data2'";
+        $sql = "SELECT * FROM $this->tabpadrao WHERE tipo = '$where' AND lancamento BETWEEN '$data1' AND '$data2' ORDER BY id";
 
         $sql = mysql_query($sql);
         $registros = array();
@@ -70,7 +70,7 @@ class receitaModel extends model {
         $data1 = $data['data1'];
         $data2 = $data['data2'];
         
-        $sql = "SELECT ROUND(SUM(valor), 2) as total FROM $this->tabpadrao WHERE tipo = '$where' AND lancamento BETWEEN '$data1' AND '$data2'";
+        $sql = "SELECT ROUND(SUM(valor), 2) as total FROM $this->tabpadrao WHERE tipo = '$where' AND lancamento BETWEEN '$data1' AND '$data2' ORDER BY id";
         
         $sql = mysql_query($sql);
         return mysql_fetch_assoc($sql);

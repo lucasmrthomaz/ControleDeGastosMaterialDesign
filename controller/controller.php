@@ -19,23 +19,23 @@ class controller {
         $this->smarty->cache_lifetime = 120;
         $this->smarty->caching = false;
         $this->smarty->setTemplateDir('./view/');
-    }
-    
-    public function ShowMessage($mensagem=""){
-         $_SESSION['msg'] = $mensagem;
+
     }
 
-/**
- * 
- * @param type $pagina pagina atual
- * @param type $totalRegistrosNaTabela Count da tabela 
- * @param type $total_reg registros a serem paginados por vez. e.g: 10 default
- * @return type HTML
- */
- 
-    public function paginador($pagina = 1, $totalRegistrosNaTabela = 0,$total_reg=5) {
-               
-        $html='';
+    public function ShowMessage($mensagem = "") {
+        $_SESSION['msg'] = $mensagem;
+    }
+
+    /**
+     * 
+     * @param type $pagina pagina atual
+     * @param type $totalRegistrosNaTabela Count da tabela 
+     * @param type $total_reg registros a serem paginados por vez. e.g: 10 default
+     * @return type HTML
+     */
+    public function paginador($pagina = 1, $totalRegistrosNaTabela = 0, $total_reg = 5) {
+
+        $html = '';
         //maximo de registros por tela de paginacao
         $total_reg = $total_reg;
         //calcula quantas telas
@@ -59,7 +59,7 @@ class controller {
             $link_anterior = "";
         else {
             $anterior = $pagina - 1;
-            $link_anterior =  $anterior;
+            $link_anterior = $anterior;
         }
 
         // decide proxima
@@ -72,23 +72,23 @@ class controller {
         if ($maxpaginas == $pagina)
             $link_ultimo = "";
 
-  
-        
+
+
         else {
             $link_ultimo = $maxpaginas;
         }
-       
+
         $this->smarty->assign("link_pri", $link_primeiro);
         $this->smarty->assign("link_ant", $link_anterior);
         $this->smarty->assign("link_pos", $link_posterior);
         $this->smarty->assign("link_ult", $link_ultimo);
- 
-       
-        
+
+
+
         $this->smarty->assign("totaln", $totalRegistrosNaTabela);
         $html_final = $this->smarty->fetch("comum/paginador.tpl");
-        
-        return  $html_final;
+
+        return $html_final;
     }
 
 }

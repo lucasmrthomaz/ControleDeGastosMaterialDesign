@@ -24,6 +24,12 @@ class relatorios extends controller {
             $this->smarty->display('comum/default.tpl');
         }
     }
+    
+    public function geraPDF() {
+        
+        $html = $this->smarty->fetch('relatorios/pdf.tpl');
+        
+    }
 
     public function gerarRelatorio() {
 
@@ -43,6 +49,7 @@ class relatorios extends controller {
         $totalRV = $model->getReceitasTotalbyTipo('RV', $data);
         $totalRF = $model->getReceitasTotalbyTipo('RF', $data);
               
+        
         //Pega as despesas
         $model2 = new despesaModel();
         $DV = $model2->getDespesabyTipo('DV', $data);
