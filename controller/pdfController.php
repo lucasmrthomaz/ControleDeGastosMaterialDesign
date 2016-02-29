@@ -5,14 +5,13 @@
  *
  * @author matheus
  */
-class pdf extends controller {
+use Dompdf\Dompdf;
+
+class pdf  {
     
     public $name;
 
-    public function __construct() {
-        parent::__construct();
-        set_include_path(get_include_path() . PATH_SEPARATOR . "/libs/dompdf");
-        require_once 'libs/dompdf/autoload.inc.php';   
+    public function __construct() {         
         $this->setName();
     }
 
@@ -21,6 +20,7 @@ class pdf extends controller {
      * @param type $html
      */
     public function gerar($html) {
+        //var_dump($html); die();
         $dompdf = new Dompdf();
         $dompdf->loadHtml($html);
         $dompdf->render();

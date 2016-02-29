@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
     <head>
 
         <!-- Add to homescreen for Chrome on Android -->
@@ -22,8 +22,8 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        
+
+
         <link href="/files/material/material.css" rel="stylesheet" type="text/css"/>
         <link href="/files/material/material.min.css" rel="stylesheet" type="text/css"/>
         <link href="/files/css/ripples.min.css" rel="stylesheet" type="text/css"/>
@@ -46,4 +46,5 @@
         <link href="/files/css/signin.css" rel="stylesheet" type="text/css"/>
 
         <title>Controle de Gastos Fox </title>
+    <head
 

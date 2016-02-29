@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-02-25 14:19:03
+/* Smarty version 3.1.29, created on 2016-02-29 15:06:20
   from "/var/www/html/ControleDeGastosMaterialDesign/view/comum/head.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_56cf3787dd9ec0_29311759',
+  'unifunc' => 'content_56d4889c785596_42762495',
   'file_dependency' => 
   array (
     'e73d3554868830619fab59718ee5d7fa3ba33d14' => 
     array (
       0 => '/var/www/html/ControleDeGastosMaterialDesign/view/comum/head.tpl',
-      1 => 1456420598,
+      1 => 1456769149,
       2 => 'file',
     ),
   ),
@@ -19,10 +19,10 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_56cf3787dd9ec0_29311759 ($_smarty_tpl) {
+function content_56d4889c785596_42762495 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
     <head>
 
         <!-- Add to homescreen for Chrome on Android -->
@@ -45,8 +45,8 @@ function content_56cf3787dd9ec0_29311759 ($_smarty_tpl) {
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        
+
+
         <link href="/files/material/material.css" rel="stylesheet" type="text/css"/>
         <link href="/files/material/material.min.css" rel="stylesheet" type="text/css"/>
         <link href="/files/css/ripples.min.css" rel="stylesheet" type="text/css"/>
@@ -79,6 +79,7 @@ function content_56cf3787dd9ec0_29311759 ($_smarty_tpl) {
         <link href="/files/css/signin.css" rel="stylesheet" type="text/css"/>
 
         <title>Controle de Gastos Fox </title>
+    <head
 
 <?php }
 }

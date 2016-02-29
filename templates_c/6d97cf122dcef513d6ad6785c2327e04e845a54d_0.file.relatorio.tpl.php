@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-02-25 14:26:20
+/* Smarty version 3.1.29, created on 2016-02-29 13:54:31
   from "/var/www/html/ControleDeGastosMaterialDesign/view/relatorios/relatorio.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_56cf393c1c5cc5_01976234',
+  'unifunc' => 'content_56d477c75ce075_01579669',
   'file_dependency' => 
   array (
     '6d97cf122dcef513d6ad6785c2327e04e845a54d' => 
     array (
       0 => '/var/www/html/ControleDeGastosMaterialDesign/view/relatorios/relatorio.tpl',
-      1 => 1456421176,
+      1 => 1456764868,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_56cf393c1c5cc5_01976234 ($_smarty_tpl) {
+function content_56d477c75ce075_01579669 ($_smarty_tpl) {
 echo $_smarty_tpl->tpl_vars['header']->value;?>
 
 <main class="mdl-layout__content mdl-color--grey-100">
@@ -34,7 +34,7 @@ echo $_smarty_tpl->tpl_vars['header']->value;?>
     <div class="mdl-grid demo-content">
         <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
             <h1><?php echo $_smarty_tpl->tpl_vars['titulo']->value;?>
-</h1>
+</h1> 
         </div>
         <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
 
@@ -42,8 +42,13 @@ echo $_smarty_tpl->tpl_vars['header']->value;?>
                 <fieldset>
 
 
-                    <legend>Período: xx-xx-xxxx até xx-xx-xxxx</legend>
-
+                    <legend>Período: <?php echo $_smarty_tpl->tpl_vars['data1']->value;?>
+ até <?php echo $_smarty_tpl->tpl_vars['data2']->value;?>
+</legend>
+                    <a class='btn btn-default' href="relatorios.php?relatorio=pdf&data1=<?php echo $_smarty_tpl->tpl_vars['data1']->value;?>
+&data2=<?php echo $_smarty_tpl->tpl_vars['data2']->value;?>
+">Gerar PDF</a>
+                    <br><br>
                     <table class="table table-responsive table-hover ">
                         <legend>Receita Fixa</legend>
                         <thead>
@@ -347,8 +352,8 @@ $_smarty_tpl->tpl_vars['key'] = $__foreach_DV_3_saved_key;
                     <input type="hidden" name="totalDF" id="totalDF" value="<?php echo $_smarty_tpl->tpl_vars['totalDF']->value['total'];?>
 ">
                     <legend>Gráficos e Relatórios</legend>
-                    <div id="tipogasto" style="width: 900px; height: 500px;"></div>
-                    <div id="saldoview" style="width: 900px; height: 500px;"></div>
+                    <div id="tipogasto" style="width: 500px; height: 400px;"></div>
+                    <div id="saldoview" style="width: 500px; height: 400px;"></div>
 
 
                 </fieldset>

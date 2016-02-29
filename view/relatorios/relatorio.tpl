@@ -6,7 +6,7 @@
     <link href="/files/css/bootstrap.css" rel="stylesheet" type="text/css"/>
     <div class="mdl-grid demo-content">
         <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
-            <h1>{$titulo}</h1>
+            <h1>{$titulo}</h1> 
         </div>
         <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
 
@@ -14,8 +14,9 @@
                 <fieldset>
 
 
-                    <legend>Período: xx-xx-xxxx até xx-xx-xxxx</legend>
-
+                    <legend>Período: {$data1} até {$data2}</legend>
+                    <a class='btn btn-default' href="relatorios.php?relatorio=pdf&data1={$data1}&data2={$data2}">Gerar PDF</a>
+                    <br><br>
                     <table class="table table-responsive table-hover ">
                         <legend>Receita Fixa</legend>
                         <thead>
@@ -186,8 +187,8 @@
                     <input type="hidden" name="totalDV" id="totalDV" value="{$totalDV.total}">
                     <input type="hidden" name="totalDF" id="totalDF" value="{$totalDF.total}">
                     <legend>Gráficos e Relatórios</legend>
-                    <div id="tipogasto" style="width: 900px; height: 500px;"></div>
-                    <div id="saldoview" style="width: 900px; height: 500px;"></div>
+                    <div id="tipogasto" style="width: 500px; height: 400px;"></div>
+                    <div id="saldoview" style="width: 500px; height: 400px;"></div>
 
 
                 </fieldset>
