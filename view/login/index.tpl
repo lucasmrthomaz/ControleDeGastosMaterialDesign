@@ -25,7 +25,7 @@
                             <h4 class="mdl-cell mdl-cell--12-col">Login</h4>
 
                             <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-                                <form class="form-group-lg" action="dashboard.php" method="post">
+                                <form class="form-group-lg" action="login.php?logar=try" method="post">
                                     <div class="col-md-10">
                                         <input type="email" class="form-control" name="email" id="inputEmail" placeholder="Email">
                                     </div>

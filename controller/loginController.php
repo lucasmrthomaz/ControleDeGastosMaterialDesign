@@ -12,10 +12,39 @@
  * @author matheus
  */
 class login extends controller {
-   public function index() {
-       
-       $header = $this->smarty->fetch('comum/head.tpl');
-       $this->smarty->assign('header', $header);
-       $this->smarty->display('login/index.tpl');
-   }
+
+    public function __construct() {
+        parent::__construct();
+        
+    }
+
+    public function valida($data) {
+        
+        $model = new loginModel();
+        $return = $model->validaLogin($data);
+        //var_dump($return); die('loko');
+
+        if (isset($return) && $return == True && sizeof($return) != 0) {
+            
+            $session = new sessao();
+            $session->gravaSessao($return);
+            $this->toHome();
+            
+            
+            
+        } else {
+            $this->frontpage();
+        }
+    }
+
+    public function frontpage() {
+        $header = $this->smarty->fetch('comum/head.tpl');
+        $this->smarty->assign('header', $header);
+        $this->smarty->display('login/index.tpl');
+    }
+    
+       public function toHome() {
+           header("Location: dashboard.php");
+    }
+
 }

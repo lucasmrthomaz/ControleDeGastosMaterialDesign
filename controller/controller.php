@@ -19,6 +19,8 @@ class controller {
         $this->smarty->cache_lifetime = 120;
         $this->smarty->caching = false;
         $this->smarty->setTemplateDir('./view/');
+        
+        $session = new sessao();
 
     }
 

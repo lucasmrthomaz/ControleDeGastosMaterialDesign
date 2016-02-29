@@ -15,6 +15,9 @@ class despesas extends controller {
 
     public function __construct() {
         parent::__construct();
+
+        $sessao = new sessao();
+        $sessao->validaSessao();
     }
 
     /**
@@ -107,12 +110,12 @@ class despesas extends controller {
         //Trata as virgulas para serem inseridas no MySQL
         $data['valor'] = str_replace(".", "", $data['valor']);
         $data['valor'] = str_replace(",", ".", $data['valor']);
-        
+
         $data['data'] = "'{$data['ano']}-{$data['mes']}-01'";
 
         return $data;
     }
-    
+
     /**
      * Pega as despesas existentes no banco de dados
      * @return type

@@ -178,9 +178,13 @@ return array(
     'despesas' => $baseDir . '/controller/despesasController.php',
     'home' => $baseDir . '/controller/home.php',
     'login' => $baseDir . '/controller/loginController.php',
+    'loginModel' => $baseDir . '/model/loginModel.php',
     'model' => $baseDir . '/model/model.php',
+    'pdf' => $baseDir . '/controller/pdfController.php',
     'produtos' => $baseDir . '/controller/produtos.php',
     'receitaModel' => $baseDir . '/model/receitaModel.php',
     'receitas' => $baseDir . '/controller/receitasController.php',
+    'relatorioModel' => $baseDir . '/model/relatorioModel.php',
     'relatorios' => $baseDir . '/controller/relatoriosController.php',
+    'sessao' => $baseDir . '/controller/sessaoController.php',
 );

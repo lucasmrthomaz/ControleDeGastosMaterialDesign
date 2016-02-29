@@ -8,6 +8,9 @@ class dashboard extends controller {
     
     public function __construct() {
         parent::__construct();
+        
+        $sessao = new sessao();
+        $sessao->validaSessao();
     }
     
     public function index() {

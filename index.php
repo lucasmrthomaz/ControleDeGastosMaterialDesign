@@ -2,4 +2,4 @@
 require __DIR__ . '/vendor/autoload.php';
 
 $objeto = new login();
-$objeto->index();
+$objeto->frontpage();

@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-02-20 18:04:39
+/* Smarty version 3.1.29, created on 2016-02-26 14:22:32
   from "/var/www/html/ControleDeGastosMaterialDesign/view/login/index.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_56c8c6d74c39b3_29188575',
+  'unifunc' => 'content_56d089d891ad77_94068419',
   'file_dependency' => 
   array (
     '93dd63d7f85f1e9d0b4e5865135d990b77a6ae8d' => 
     array (
       0 => '/var/www/html/ControleDeGastosMaterialDesign/view/login/index.tpl',
-      1 => 1455998674,
+      1 => 1456507041,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_56c8c6d74c39b3_29188575 ($_smarty_tpl) {
+function content_56d089d891ad77_94068419 ($_smarty_tpl) {
 echo $_smarty_tpl->tpl_vars['header']->value;?>
 
 <link href="../../files/material/material.min.login.css" rel="stylesheet" type="text/css"/>
@@ -48,7 +48,7 @@ echo $_smarty_tpl->tpl_vars['header']->value;?>
                             <h4 class="mdl-cell mdl-cell--12-col">Login</h4>
 
                             <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-                                <form class="form-group-lg" action="dashboard.php" method="post">
+                                <form class="form-group-lg" action="login.php?logar=try" method="post">
                                     <div class="col-md-10">
                                         <input type="email" class="form-control" name="email" id="inputEmail" placeholder="Email">
                                     </div>
