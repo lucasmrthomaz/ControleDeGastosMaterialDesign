@@ -46,5 +46,5 @@
         <link href="/files/css/signin.css" rel="stylesheet" type="text/css"/>
 
         <title>Controle de Gastos Fox </title>
-    <head
+    </head>
 

@@ -23,6 +23,7 @@ class pdf  {
         //var_dump($html); die();
         $dompdf = new Dompdf();
         $dompdf->loadHtml($html);
+        $dompdf->set_paper('A4');
         $dompdf->render();
         $dompdf->stream($this->name);
         
