@@ -22,6 +22,11 @@ class loginModel extends model {
         $this->setTab();
     }
 
+    /**
+     * Valida o Login
+     * @param type $data
+     * @return type
+     */
     public function validaLogin($data) {
         
         $this->setPass($data['pass']);
@@ -34,14 +39,25 @@ class loginModel extends model {
         return $result;      
     }
 
+    /**
+     * Seta a tab padrão
+     */
     public function setTab() {
         $this->tabpadrao = 'usuario';
     }
-
+    
+    /**
+     * Encripta o password com o valor em MD5 e seta 
+     * @param type $password
+     */
     private function setPass($password) {
         $this->pass = md5($password);
     }
 
+    /**
+     * Seta o E-mail
+     * @param type $email
+     */
     private function setEmail($email) {
         $this->email = $email;
     }

@@ -13,6 +13,9 @@ class dashboard extends controller {
         $sessao->validaSessao();
     }
     
+    /**
+     * Somente direciona para a dashboard
+     */
     public function index() {
         $header = $this->smarty->fetch('comum/head.tpl');
         $content = $this->smarty->fetch('dashboard/dashboard.tpl');

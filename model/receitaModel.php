@@ -20,6 +20,11 @@ class receitaModel extends model {
         $this->setTab();
     }
 
+    
+    /**
+     * Grava as receitas no banco de dados
+     * @param type $data
+     */
     public function gravaReceita($data) {
         //var_dump($data); die();
         $descricao = $data['despesa'];
@@ -32,6 +37,12 @@ class receitaModel extends model {
         mysql_query($sql);
     }
 
+    
+    
+    /**
+     * Pega todas as receitas existentes no banco de dados
+     * @return type
+     */
     public function getReceitasExistentes() {
         $sql = "SELECT * FROM $this->tabpadrao GROUP BY descricao";
         $sql = mysql_query($sql);
@@ -44,6 +55,15 @@ class receitaModel extends model {
         return $registros;
     }
 
+    
+    
+    /**
+     * Pega todas as receitas to banco de dados de acordo com o parâmetro passado
+     * e as datas fornecidas
+     * @param type $where
+     * @param type $data
+     * @return type
+     */
     public function getReceitasbyTipo($where = null, $data) {
         $data1 = $data['data1'];
         $data2 = $data['data2'];
@@ -61,6 +81,7 @@ class receitaModel extends model {
     }
     
     
+    
     /**
      * Retorna a soma de todos os valores digitados entre as datas escolhidas
      * @param type $where parâmetros de pesquisa 'RV' ou 'RF'
@@ -74,10 +95,10 @@ class receitaModel extends model {
         
         $sql = mysql_query($sql);
         return mysql_fetch_assoc($sql);
-        
-        
+            
     }
 
+    
     /**
      * Seta a tab padrão
      */

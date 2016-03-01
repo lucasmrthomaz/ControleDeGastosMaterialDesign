@@ -20,6 +20,10 @@ class despesaModel extends model {
         $this->setTab();
     }
 
+    /**
+     * Grava as despesas no banco de dados
+     * @param type $data array com os valores do form
+     */
     public function gravaDespesa($data) {
         //var_dump($data); die();
         $descricao = $data['despesa'];
@@ -33,6 +37,10 @@ class despesaModel extends model {
         mysql_query($sql) or die(mysql_error());
     }
 
+    /**
+     * Retorna as despesas existentes no banco de dados
+     * @return type
+     */
     public function getDespesasExistentes() {
         $sql = "SELECT * FROM $this->tabpadrao GROUP BY descricao";
         $sql = mysql_query($sql);
@@ -45,6 +53,12 @@ class despesaModel extends model {
         return $registros;
     }
 
+    /**
+     * Pega as despesas com base no tipo passado.
+     * @param type $where
+     * @param type $data
+     * @return type
+     */
     public function getDespesabyTipo($where = null, $data) {
         $data1 = $data['data1'];
         $data2 = $data['data2'];
@@ -75,7 +89,10 @@ class despesaModel extends model {
         $result = mysql_fetch_assoc($sql);
         return $result;
     }
-
+    
+    /**
+     * Seta a tab padrão
+     */
     private function setTab() {
         $this->tabpadrao = 'despesa';
     }

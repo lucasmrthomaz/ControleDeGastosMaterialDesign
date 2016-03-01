@@ -17,7 +17,11 @@ class login extends controller {
         parent::__construct();
         
     }
-
+    
+    /**
+     * Valida o Login
+     * @param type $data
+     */
     public function valida($data) {
         
         $model = new loginModel();
@@ -29,14 +33,15 @@ class login extends controller {
             $session = new sessao();
             $session->gravaSessao($return);
             $this->toHome();
-            
-            
-            
+                      
         } else {
             $this->frontpage();
         }
     }
 
+    /**
+     * Redireciona para a página de login
+     */
     public function frontpage() {
         $header = $this->smarty->fetch('comum/head.tpl');
         $this->smarty->assign('header', $header);

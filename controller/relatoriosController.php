@@ -86,12 +86,19 @@ class relatorios extends controller {
         $this->montaPDF($html);
     }
     
+    /**
+     * Gera o PDF
+     * @param type $html
+     */
     public function montaPDF($html) {
         $pdf = new pdf();
         $pdf->gerar($html);
         
     }
 
+    /**
+     * Faz todas as coisas existentes no mundo
+     */
     public function gerarRelatorio() {
 
         $mes1 = $_POST['mes1'];
