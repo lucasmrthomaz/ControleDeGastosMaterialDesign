@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-02-26 14:22:32
+/* Smarty version 3.1.29, created on 2016-03-01 09:16:33
   from "/var/www/html/ControleDeGastosMaterialDesign/view/login/index.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_56d089d891ad77_94068419',
+  'unifunc' => 'content_56d588212069e0_08909142',
   'file_dependency' => 
   array (
     '93dd63d7f85f1e9d0b4e5865135d990b77a6ae8d' => 
     array (
       0 => '/var/www/html/ControleDeGastosMaterialDesign/view/login/index.tpl',
-      1 => 1456507041,
+      1 => 1456834505,
       2 => 'file',
     ),
   ),
@@ -19,12 +19,14 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_56d089d891ad77_94068419 ($_smarty_tpl) {
+function content_56d588212069e0_08909142 ($_smarty_tpl) {
 echo $_smarty_tpl->tpl_vars['header']->value;?>
 
 <link href="../../files/material/material.min.login.css" rel="stylesheet" type="text/css"/>
 <link href="../../files/material/login.css" rel="stylesheet" type="text/css"/>
-
+<?php echo '<script'; ?>
+ src="../../files/js/login/validacamposlog.js" type="text/javascript"><?php echo '</script'; ?>
+>
 
 <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
@@ -60,7 +62,7 @@ echo $_smarty_tpl->tpl_vars['header']->value;?>
                                     <br>
                                     <div class="input-group input-group-lg">
                                         <span class="" id="sizing-addon1"></span>
-                                        <input type="submit" class="btn btn-default">
+                                        <input name="submit" id="submit" type="submit" class="btn btn-default">
                                     </div>
 
 

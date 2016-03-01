@@ -1,7 +1,7 @@
 {$header}
 <link href="../../files/material/material.min.login.css" rel="stylesheet" type="text/css"/>
 <link href="../../files/material/login.css" rel="stylesheet" type="text/css"/>
-
+<script src="../../files/js/login/validacamposlog.js" type="text/javascript"></script>
 
 <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
@@ -37,7 +37,7 @@
                                     <br>
                                     <div class="input-group input-group-lg">
                                         <span class="" id="sizing-addon1"></span>
-                                        <input type="submit" class="btn btn-default">
+                                        <input name="submit" id="submit" type="submit" class="btn btn-default">
                                     </div>
 
 

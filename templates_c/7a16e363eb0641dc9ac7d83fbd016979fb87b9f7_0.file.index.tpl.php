@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-02-24 11:11:31
+/* Smarty version 3.1.29, created on 2016-03-01 09:37:48
   from "/var/www/html/ControleDeGastosMaterialDesign/view/relatorios/index.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_56cdba135d96d8_91182372',
+  'unifunc' => 'content_56d58d1cc4c770_48027175',
   'file_dependency' => 
   array (
     '7a16e363eb0641dc9ac7d83fbd016979fb87b9f7' => 
     array (
       0 => '/var/www/html/ControleDeGastosMaterialDesign/view/relatorios/index.tpl',
-      1 => 1456323089,
+      1 => 1456835830,
       2 => 'file',
     ),
   ),
@@ -19,10 +19,13 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_56cdba135d96d8_91182372 ($_smarty_tpl) {
+function content_56d58d1cc4c770_48027175 ($_smarty_tpl) {
 ?>
 <main class="mdl-layout__content mdl-color--grey-100">
     <div class="mdl-grid demo-content">
+        <?php echo '<script'; ?>
+ src="/files/js/relatorios/validacoescamposrel.js" type="text/javascript"><?php echo '</script'; ?>
+>
         <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
             <h1>Visualizar Despesas</h1>
         </div>
@@ -46,8 +49,8 @@ function content_56cdba135d96d8_91182372 ($_smarty_tpl) {
                         <label for="mes1" class="col-md-2 control-label">De: </label>
                     </div>
                     <div class="col-md-10">
-                        <select name="mes1" class="form-control">
-                            <option value="">Mês</option>
+                        <select name="mes1" id="mes1" class="form-control">
+                            <option value="def">Mês</option>
                             <option value="01">Janeiro</option>
                             <option value="02">Feveriro</option>
                             <option value="03">Março</option>
@@ -68,7 +71,7 @@ function content_56cdba135d96d8_91182372 ($_smarty_tpl) {
                         <label for="mes2" class="col-md-2 control-label">Até: </label>
                     </div>
                     <div class="col-md-10">
-                        <select name="mes2" class="form-control">
+                        <select name="mes2" id="mes2" class="form-control">
                             <option value="">Mês</option>
                             <option value="01">Janeiro</option>
                             <option value="02">Feveriro</option>
@@ -87,7 +90,7 @@ function content_56cdba135d96d8_91182372 ($_smarty_tpl) {
 
                     <div class="form-group">
                         <div class="col-md-10 col-md-offset-2"> 
-                            <button type="submit" class="btn btn-fab btn-fab-mini">
+                            <button type="submit" name="enviar" id="enviar" class="btn btn-fab btn-fab-mini">
                                 <i class="material-icons">send</i>
                             </button>
                         </div>
