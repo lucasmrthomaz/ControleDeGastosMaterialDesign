@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-02-23 11:05:48
+/* Smarty version 3.1.29, created on 2016-03-15 21:44:56
   from "/var/www/html/ControleDeGastosMaterialDesign/view/comum/default.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_56cc673c841e50_58012008',
+  'unifunc' => 'content_56e8ac884b93f6_61614267',
   'file_dependency' => 
   array (
     '5d9dd703050581b2d16ee2e45265267ec5ecb06d' => 
     array (
       0 => '/var/www/html/ControleDeGastosMaterialDesign/view/comum/default.tpl',
-      1 => 1456236346,
+      1 => 1458089094,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_56cc673c841e50_58012008 ($_smarty_tpl) {
+function content_56e8ac884b93f6_61614267 ($_smarty_tpl) {
 ?>
 
 <?php echo $_smarty_tpl->tpl_vars['header']->value;?>
@@ -64,9 +64,9 @@ function content_56cc673c841e50_58012008 ($_smarty_tpl) {
                         <span class="visuallyhidden">Accounts</span>
                     </button>
                     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
-                        <li class="mdl-menu__item">msfidelis01@gmail.com</li>
-                        <li class="mdl-menu__item">info@example.com</li>
-                        <li class="mdl-menu__item"><i class="material-icons">add</i>Add another account...</li>
+                        <li class="mdl-menu__item"><?php echo $_smarty_tpl->tpl_vars['email']->value;?>
+</li>
+
                     </ul>
                 </div>
             </header>
@@ -77,7 +77,7 @@ function content_56cc673c841e50_58012008 ($_smarty_tpl) {
                 <a class="mdl-navigation__link" href="receitas.php?mod=RV"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">trending_up</i>Receitas Variáveis</a>
                 <a class="mdl-navigation__link" href="despesas.php?mod=DF"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">trending_down</i>Despesas Fixas</a>
                 <a class="mdl-navigation__link" href="despesas.php?mod=DV"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">trending_down</i>Despesas Variáveis</a>
-                <a class="mdl-navigation__link" href="excluir.php"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">delete_forever</i>Excluir Registros</a>
+                <a class="mdl-navigation__link" href="registros.php"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">delete_forever</i>Excluir Registros</a>
                 <div class="mdl-layout-spacer"></div>
                 <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">help_outline</i><span class="visuallyhidden">Help</span></a>
             </nav>

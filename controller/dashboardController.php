@@ -1,18 +1,22 @@
 <?php
+
 /**
  * Description of dashboardController
  *
  * @author matheus
  */
 class dashboard extends controller {
-    
+
     public function __construct() {
         parent::__construct();
-        
+
         $sessao = new sessao();
-        $sessao->validaSessao();
+        $users = $sessao->validaSessao();
+
+        $this->smarty->assign('email', $users['user']['email']);
+        $this->smarty->assign('nome', $users['user']['nome']);
     }
-    
+
     /**
      * Somente direciona para a dashboard
      */
@@ -23,5 +27,5 @@ class dashboard extends controller {
         $this->smarty->assign('content', $content);
         $this->smarty->display('comum/default.tpl');
     }
-    
+
 }

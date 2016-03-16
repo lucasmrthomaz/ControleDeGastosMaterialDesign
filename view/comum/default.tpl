@@ -40,9 +40,8 @@
                         <span class="visuallyhidden">Accounts</span>
                     </button>
                     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
-                        <li class="mdl-menu__item">msfidelis01@gmail.com</li>
-                        <li class="mdl-menu__item">info@example.com</li>
-                        <li class="mdl-menu__item"><i class="material-icons">add</i>Add another account...</li>
+                        <li class="mdl-menu__item">{$email}</li>
+
                     </ul>
                 </div>
             </header>
@@ -53,7 +52,7 @@
                 <a class="mdl-navigation__link" href="receitas.php?mod=RV"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">trending_up</i>Receitas Variáveis</a>
                 <a class="mdl-navigation__link" href="despesas.php?mod=DF"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">trending_down</i>Despesas Fixas</a>
                 <a class="mdl-navigation__link" href="despesas.php?mod=DV"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">trending_down</i>Despesas Variáveis</a>
-                <a class="mdl-navigation__link" href="excluir.php"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">delete_forever</i>Excluir Registros</a>
+                <a class="mdl-navigation__link" href="registros.php"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">delete_forever</i>Excluir Registros</a>
                 <div class="mdl-layout-spacer"></div>
                 <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">help_outline</i><span class="visuallyhidden">Help</span></a>
             </nav>

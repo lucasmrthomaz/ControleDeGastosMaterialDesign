@@ -17,7 +17,10 @@ class despesas extends controller {
         parent::__construct();
 
         $sessao = new sessao();
-        $sessao->validaSessao();
+        $users = $sessao->validaSessao();
+
+        $this->smarty->assign('email', $users['user']['email']);
+        $this->smarty->assign('nome', $users['user']['nome']);
     }
 
     /**

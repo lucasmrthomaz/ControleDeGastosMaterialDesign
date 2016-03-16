@@ -20,30 +20,33 @@ class receitaModel extends model {
         $this->setTab();
     }
 
-    
     /**
      * Grava as receitas no banco de dados
      * @param type $data
      */
     public function gravaReceita($data) {
-        //var_dump($data); die();
+        var_dump($data);
         $descricao = $data['despesa'];
         $tipo = $data['mod'];
         $valor = $data['valor'];
         $mes = $data['mes'];
         $ano = $data['ano'];
         $data = $data['data'];
-        $sql = "INSERT INTO {$this->tabpadrao} VALUES (NULL, '$descricao', '$tipo', '$valor', $mes, '$ano', $data) ORDER BY id";
+        $sql = "INSERT INTO {$this->tabpadrao} VALUES (NULL, '$descricao', '$tipo', '$valor', $mes, '$ano', $data)";
+        mysql_query($sql) or die(mysql_error());
+    }
+    
+    public function delReceita($id) {
+        $sql = "DELETE FROM $this->tabpadrao WHERE id = {$id}";
         mysql_query($sql);
+        return true;
     }
 
-    
-    
     /**
      * Pega todas as receitas existentes no banco de dados
      * @return type
      */
-    public function getReceitasExistentes() {
+    public function getReceitasExistentes($where = null) {
         $sql = "SELECT * FROM $this->tabpadrao GROUP BY descricao";
         $sql = mysql_query($sql);
         $registros = array();
@@ -55,8 +58,18 @@ class receitaModel extends model {
         return $registros;
     }
 
-    
-    
+    public function findAll($where = null) {
+        $sql = "SELECT * FROM $this->tabpadrao";
+        $sql = mysql_query($sql);
+        $registros = array();
+
+        while ($result = mysql_fetch_assoc($sql)) {
+            $registros[] = $result;
+        }
+
+        return $registros;
+    }
+
     /**
      * Pega todas as receitas to banco de dados de acordo com o parâmetro passado
      * e as datas fornecidas
@@ -79,9 +92,7 @@ class receitaModel extends model {
         //var_dump($registros); die();
         return $registros;
     }
-    
-    
-    
+
     /**
      * Retorna a soma de todos os valores digitados entre as datas escolhidas
      * @param type $where parâmetros de pesquisa 'RV' ou 'RF'
@@ -90,15 +101,13 @@ class receitaModel extends model {
     public function getReceitasTotalbyTipo($where, $data) {
         $data1 = $data['data1'];
         $data2 = $data['data2'];
-        
+
         $sql = "SELECT ROUND(SUM(valor), 2) as total FROM $this->tabpadrao WHERE tipo = '$where' AND lancamento BETWEEN '$data1' AND '$data2' ORDER BY id";
-        
+
         $sql = mysql_query($sql);
         return mysql_fetch_assoc($sql);
-            
     }
 
-    
     /**
      * Seta a tab padrão
      */

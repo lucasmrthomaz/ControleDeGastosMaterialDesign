@@ -20,6 +20,7 @@ class sessao {
     function gravaSessao($dados = null) {
         $_SESSION['user']['email'] = $dados['email'];
         $_SESSION['user']['nome'] = $dados['nome'];
+        
     }
 
     function validaSessao() {
@@ -27,10 +28,13 @@ class sessao {
             unset($_SESSION);
             $this->frontpage();
         }
+        
+        return $_SESSION;
     }
 
     public function frontpage() {
         header("Location: login.php");
+        die();
     }
     
     

@@ -32,9 +32,15 @@ class despesaModel extends model {
         $mes = $data['mes'];
         $ano = $data['ano'];
         $data = $data['data'];
-        $sql = "INSERT INTO {$this->tabpadrao} VALUES (NULL, '$descricao', '$tipo', '$valor', $mes, '$ano', $data) ORDER BY id";
+        $sql = "INSERT INTO {$this->tabpadrao} VALUES (NULL, '$descricao', '$tipo', '$valor', $mes, '$ano', $data)";
 
         mysql_query($sql) or die(mysql_error());
+    }
+
+    public function delDespesa($id) {
+        $sql = "DELETE FROM $this->tabpadrao WHERE id = {$id}";
+        mysql_query($sql);
+        return true;
     }
 
     /**
@@ -43,6 +49,18 @@ class despesaModel extends model {
      */
     public function getDespesasExistentes() {
         $sql = "SELECT * FROM $this->tabpadrao GROUP BY descricao";
+        $sql = mysql_query($sql);
+        $registros = array();
+
+        while ($result = mysql_fetch_assoc($sql)) {
+            $registros[] = $result;
+        }
+
+        return $registros;
+    }
+
+    public function findAll($where = null) {
+        $sql = "SELECT * FROM $this->tabpadrao $where";
         $sql = mysql_query($sql);
         $registros = array();
 
@@ -89,7 +107,7 @@ class despesaModel extends model {
         $result = mysql_fetch_assoc($sql);
         return $result;
     }
-    
+
     /**
      * Seta a tab padrão
      */
