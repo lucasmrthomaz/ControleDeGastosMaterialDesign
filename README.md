@@ -40,6 +40,19 @@ Ex:
 
 ```
 Login: msfidelis01@gmail.com
+
 Senha: teste123 
+
+
+#Observações
+
+Frameworks utilizados:
+* Smarty - http://www.smarty.net/
+*  Material Design Bootstrap - http://fezvrasta.github.io/bootstrap-material-design/bootstrap-elements.html
+
+
+ Não realizando
+*  Validações de campos, inserts e selects
+
 
 :)
