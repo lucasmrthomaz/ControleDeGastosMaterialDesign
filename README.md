@@ -32,6 +32,14 @@ Ex:
 * Instale o banco de dados 
 
 ``` 
-  # 
+  # mysql -u root -p
+  # create database livro;
+  # exit
+  # cd ControleDeGastosMaterialDesign/
+  # mysql -u root livro < banco_de_dados.sql
 
 ```
+Login: msfidelis01@gmail.com
+Senha: teste123 
+
+:)
