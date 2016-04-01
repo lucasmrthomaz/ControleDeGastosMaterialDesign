@@ -50,7 +50,7 @@ Frameworks utilizados:
 * Smarty - http://www.smarty.net/
 * Material Design Bootstrap - http://fezvrasta.github.io/bootstrap-material-design/bootstrap-elements.html
 * Google Pie - https://developers.google.com/chart/interactive/docs/gallery/piechart
-* DOMPdf - https://github.com/dompdf/dompdf
+*  DOMPdf - https://github.com/dompdf/dompdf
 
  Não realizando
 *  Validações de campos, inserts e selects
