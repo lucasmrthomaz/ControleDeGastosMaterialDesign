@@ -14,8 +14,9 @@
                 <fieldset>
 
 
-                    <legend>Período: {$data1} até {$data2}</legend>
+                    <legend>Período: {$data1|date_format: 'd/m/Y'|default:"-"} até {$data2|date_format: 'd/m/Y'|default:"-"}</legend>
                     <a class='btn btn-default' href="relatorios.php?relatorio=pdf&data1={$data1}&data2={$data2}">Gerar PDF</a>
+                    <a class='btn btn-default' href="relatorios.php?relatorio=email&data1={$data1}&data2={$data2}">Enviar Email</a>
                     <br><br>
                     <table class="table table-responsive table-hover ">
                         <legend>Receita Fixa</legend>

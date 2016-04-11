@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-02-29 17:05:48
+/* Smarty version 3.1.29, created on 2016-04-11 09:26:20
   from "/var/www/html/ControleDeGastosMaterialDesign/view/relatorios/relatoriogerado.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_56d4a49c0f75c7_22262976',
+  'unifunc' => 'content_570b97ece538e3_37721994',
   'file_dependency' => 
   array (
     'e2eb4c55cd47bf149eb27e1acb77ccaab53b24d6' => 
     array (
       0 => '/var/www/html/ControleDeGastosMaterialDesign/view/relatorios/relatoriogerado.tpl',
-      1 => 1456776345,
+      1 => 1460377516,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_56d4a49c0f75c7_22262976 ($_smarty_tpl) {
+function content_570b97ece538e3_37721994 ($_smarty_tpl) {
 ?>
 <html>
     <head>
@@ -31,10 +31,6 @@ function content_56d4a49c0f75c7_22262976 ($_smarty_tpl) {
 
     <body>
         <main class="mdl-layout__content mdl-color--grey-100">
-
-
-
-
 
             <form class="form-horizontal" action="relato.php?acao=salvar" method="post">
                 <fieldset>

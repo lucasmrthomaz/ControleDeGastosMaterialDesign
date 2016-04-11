@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-02-29 13:54:31
+/* Smarty version 3.1.29, created on 2016-04-11 09:46:58
   from "/var/www/html/ControleDeGastosMaterialDesign/view/relatorios/relatorio.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_56d477c75ce075_01579669',
+  'unifunc' => 'content_570b9cc223f032_94793971',
   'file_dependency' => 
   array (
     '6d97cf122dcef513d6ad6785c2327e04e845a54d' => 
     array (
       0 => '/var/www/html/ControleDeGastosMaterialDesign/view/relatorios/relatorio.tpl',
-      1 => 1456764868,
+      1 => 1460378808,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,8 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_56d477c75ce075_01579669 ($_smarty_tpl) {
+function content_570b9cc223f032_94793971 ($_smarty_tpl) {
+if (!is_callable('smarty_modifier_date_format')) require_once '/var/www/html/ControleDeGastosMaterialDesign/vendor/smarty/smarty/libs/plugins/modifier.date_format.php';
 echo $_smarty_tpl->tpl_vars['header']->value;?>
 
 <main class="mdl-layout__content mdl-color--grey-100">
@@ -42,12 +43,15 @@ echo $_smarty_tpl->tpl_vars['header']->value;?>
                 <fieldset>
 
 
-                    <legend>Período: <?php echo $_smarty_tpl->tpl_vars['data1']->value;?>
- até <?php echo $_smarty_tpl->tpl_vars['data2']->value;?>
+                    <legend>Período: <?php echo (($tmp = @smarty_modifier_date_format($_smarty_tpl->tpl_vars['data1']->value,'d/m/Y'))===null||$tmp==='' ? "-" : $tmp);?>
+ até <?php echo (($tmp = @smarty_modifier_date_format($_smarty_tpl->tpl_vars['data2']->value,'d/m/Y'))===null||$tmp==='' ? "-" : $tmp);?>
 </legend>
                     <a class='btn btn-default' href="relatorios.php?relatorio=pdf&data1=<?php echo $_smarty_tpl->tpl_vars['data1']->value;?>
 &data2=<?php echo $_smarty_tpl->tpl_vars['data2']->value;?>
 ">Gerar PDF</a>
+                    <a class='btn btn-default' href="relatorios.php?relatorio=email&data1=<?php echo $_smarty_tpl->tpl_vars['data1']->value;?>
+&data2=<?php echo $_smarty_tpl->tpl_vars['data2']->value;?>
+">Enviar Email</a>
                     <br><br>
                     <table class="table table-responsive table-hover ">
                         <legend>Receita Fixa</legend>

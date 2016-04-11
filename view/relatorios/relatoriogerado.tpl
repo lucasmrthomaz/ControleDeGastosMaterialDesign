@@ -9,10 +9,6 @@
     <body>
         <main class="mdl-layout__content mdl-color--grey-100">
 
-
-
-
-
             <form class="form-horizontal" action="relato.php?acao=salvar" method="post">
                 <fieldset>
                     <h1>{$titulo}</h1> 
